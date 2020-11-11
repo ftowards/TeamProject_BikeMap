@@ -28,8 +28,8 @@
 		</div>
 		<div id="loginDiv">
 			<ul id="login">
-				<li><a href="#">로그인&nbsp<img src="<%=request.getContextPath()%>/img/loginIcon.png"/></a></li>
-				<li><input type="button" value="회원가입"></li>
+				<li><a href="<%=request.getContextPath()%>/login">로그인&nbsp<img src="<%=request.getContextPath()%>/img/loginIcon.png"/></a></li>
+				<li><input type="button" value="회원가입" onclick="location.href='<%=request.getContextPath()%>/registerForm'"></li>
 			</ul>
 		</div>
 	</div>	
@@ -37,7 +37,7 @@
 	<div class="lineDiv"></div>
 	<div id="naviDiv">
 	<ul id="navi">
-		<li><a href="#">홈</a><div id="homeLine"></div></li>
+		<li><a href="<%=request.getContextPath()%>/">홈</a><div id="homeLine"></div></li>
 		<li><a href="#">루트짜기</a><div id="routeLine"></div></li>
 		<li><a href="#">코스검색</a><div id="courseLine"></div></li>
 		<li><a href="#">동행찾기</a><div id="searchLine"></div>
