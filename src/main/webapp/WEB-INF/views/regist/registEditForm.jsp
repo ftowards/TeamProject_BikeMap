@@ -36,58 +36,18 @@
 			yearRange : "1950:2010"
 		});
 		
-		var idChk = "N";
-		var regId = /^[A-Za-z]{1}\w{7,11}$/ ;
-		var regName = /^[가-힣]{2,5}$/ ;
-		
-		
-		// 아이디 중복 검사 로직
-		// 아이디 정규식 체크	
-		$("#idChk").click(function(){
-			
-			idChk = "Y";
-		});
-		
-		// 아이디 칸 입력 시 중복 체크 여부는 초기화
-		$("#userid").keydown(function(){
-			idChk = "N";
-		});
-		
 		$("#domainSelect").on({'change' : function(){
 			$("#email2").val($("#domainSelect").val());
 		}});
-		
-		
+				
 		// 입력사항 체크
 		$("#registerForm").submit(function(){
-			if($("#userid").val()==""){
-				alert("아이디를 입력하세요.");
-				return false;
-			} 
-			
-			if(idChk != "Y"){
-				alert("아이디 중복 체크를 하세요.");
-				return false;
-			}
-			
-			if($("#userpwd").val()==""){
-				alert("비밀번호를 입력하세요.");
-				return false;
-			}
-			
+
 			if($("#userpwdChk").val()==""){
 				alert("비밀번호 확인을 입력하세요.");
 				return false;
 			}else if($("#userpwd").val() != $("#userpwdChk").val()){
 				alert("비밀번호가 일치하지 않습니다.");
-				return false;
-			}
-			
-			if($("#username").val()==""){
-				alert("이름을 입력하세요.");
-				return false;
-			}else if(!regName.test($("#username").val())){
-				alert("이름은 한글로 2~5자 사이로 입력해주세요.");
 				return false;
 			}
 			
@@ -101,8 +61,7 @@
 				return false;
 			}
 			
-			
-			var url = "/home/registerFormOk"
+			var url = "/home/registerEditFormOk"
 			var data = $("#registerForm").serialize();
 			$.ajax({
 				type : 'POST',
@@ -110,13 +69,12 @@
 				data : data,
 				success : function(result){
 					if(result > 0){
-						alert("회원 가입 완료")
-						location.href="/registWelcome";
+						alert("회원 정보 수정 완료")
 					} else{
-						alert("회원가입에 실패하였습니다.");
+						alert("회원 정보 수정에 실패하였습니다.");
 					}
 				},error: function(){
-					console.log("회원 가입 오류");
+					console.log("회원 정보 수정 오류");
 				}
 			});
 			return false;
@@ -139,14 +97,11 @@
 		</div>
 		<div id="input">
 			<ul>
-				<li><input type="text" name="userid" id="userid" maxlength="12" size="12"/><input type="button" class="button" id="idChk" value="중복검사"/>
-					<span class="reg">8~12자 영문(시작)/숫자/_ 사용</span></li>
+				<li><input type="text" name="userid" id="userid" maxlength="12" size="12" value="${user.userid }" disabled/>
 				<li><input type="password" name="userpwd" id="userpwd" maxlength="12" size="20"/>
-					<span class="reg">8~12자리 영문/숫자/특수문자 사용</span></li>
 				<li><input type="password" name="userpwdChk" id="userpwdChk" maxlength="12" size="20"/></li>
-				<li><input type="text" name="username" id="username" maxlength="5" size="20"/>
-					<span class="reg">한글로 최대 5자까지 입력</span></li>
-				<li><input type="text" name="email1" id="email1" size="6"/>@<input type="text" id="email2" name="email2" size="6"/>
+				<li><input type="text" name="username" id="username" maxlength="5" size="20" value="${user.username }" disabled/>
+				<li><input type="text" name="email1" id="email1" size="6" value="${user.email1 }"/>@<input type="text" id="email2" name="eamil2" size="6" value="${user.email2 }"/>
 					<select id="domainSelect">
 						<option value="" selected>직접 입력</option>
 						<option value="naver.com">naver.com</option>
@@ -154,15 +109,15 @@
 						<option value="daum.net">daum.net</option>
 						<option value="hotmali.com">hotmail.com</option>
 					</select></li>
-				<li><input type="radio" name="gender" id="gender" value="1"/>남 자
-					<input type="radio" name="gender" id="gender" value="2" checked/>여 자</li>
-				<li><input type="text" name="birth" id="datepicker" maxlength="10"/>
-					<span class="reg">ex)1980-12-03</span></li>			
+				<li><input type="radio" name="gender" id="gender" value="1" <c:if test="${user.gender == 1}">checked</c:if>/>남 자
+					<input type="radio" name="gender" id="gender" value="2" <c:if test="${user.gender == 2}">checked</c:if>/>여 자</li>
+				<li><input type="text" name="birth" id="datepicker" maxlength="10" value="${user.birth }"/>			
 			</ul>
 		</div>
+		<hr/>
 		<div id="buttons">
-			<input type="submit" class = "button" value="회원가입"/>
-			<input type="reset" class = "button" value="다시쓰기"/>
+			<input type="submit" class = "button" value="수정"/>
+			<input type="button" class = "button" value="회원 탈퇴"/>
 		</div>
 	</form>
 </div>
