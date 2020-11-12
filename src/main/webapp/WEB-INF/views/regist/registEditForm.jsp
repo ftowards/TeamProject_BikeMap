@@ -23,31 +23,19 @@
 	.reg{color:#55CBF5; font-size : 12px; font-weight:bold;}
 </style>
 <script>
-	$(function(){
-		$("#datepicker").datepicker({
-			changeYear : true,
-			changeMonth : true,
-			constraintInput : true,
-			dateFormat : "yy-mm-dd",
-			dayNames : ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
-			dayNamesMin : ['일','월','화','수','목','금','토'],
-			monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-			monthNames : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
-			yearRange : "1950:2010"
-		});
-		
+	$(function(){	
 		$("#domainSelect").on({'change' : function(){
 			$("#email2").val($("#domainSelect").val());
 		}});
 				
 		// 입력사항 체크
 		$("#registerForm").submit(function(){
-			if($("#userpwdChk").val()==""){
-				alert("비밀번호 확인을 입력하세요.");
-				return false;
-			}else if($("#userpwd").val() != $("#userpwdChk").val()){
-				alert("비밀번호가 일치하지 않습니다.");
-				return false;
+			
+			if($("#userpwd").val() != null || $("#userpwdChk").val() != null){
+				if($("#userpwd").val() != $("#userpwdChk").val()){
+					alert("비밀번호가 일치하지 않습니다.");
+					return false;
+				}
 			}
 			
 			if($("#email1").val()=="" || $("#email2").val=="" ){
@@ -55,13 +43,14 @@
 				return false;
 			}
 			
-			if($("#datepicker").val()==""){
-				alert("생일을 선택하세요.");
-				return false;
-			}
-			
 			var url = "/home/registerEditFormOk"
-			var data = $("#registerForm").serialize();
+			var data = "userid=${user.userid}&email1="+$("#email1").val()+"&email2="+$("#email2").val();
+			if($("#userpwd").val()!=""){
+				data += "&userpwd="+$("#userpwd").val();
+			}else{
+				data += "&userpwd=${user.userpwd}";
+			}
+		
 			$.ajax({
 				type : 'POST',
 				url : url,
@@ -100,7 +89,7 @@
 				<li><input type="password" name="userpwd" id="userpwd" maxlength="12" size="20"/>
 				<li><input type="password" name="userpwdChk" id="userpwdChk" maxlength="12" size="20"/></li>
 				<li><input type="text" name="username" id="username" maxlength="5" size="20" value="${user.username }" disabled/>
-				<li><input type="text" name="email1" id="email1" size="6" value="${user.email1 }"/>@<input type="text" id="email2" name="eamil2" size="6" value="${user.email2 }"/>
+				<li><input type="text" name="email1" id="email1" size="6" value="${user.email1 }"/>@<input type="text" id="email2" name="email2" size="6" value="${user.email2 }"/>
 					<select id="domainSelect">
 						<option value="" selected>직접 입력</option>
 						<option value="naver.com">naver.com</option>
@@ -108,15 +97,15 @@
 						<option value="daum.net">daum.net</option>
 						<option value="hotmali.com">hotmail.com</option>
 					</select></li>
-				<li><input type="radio" name="gender" id="gender" value="1" <c:if test="${user.gender == 1}">checked</c:if>/>남 자
-					<input type="radio" name="gender" id="gender" value="2" <c:if test="${user.gender == 2}">checked</c:if>/>여 자</li>
-				<li><input type="text" name="birth" id="datepicker" maxlength="10" value="${user.birth }"/>			
+				<li><input type="radio" name="gender" id="gender" value="1" disabled <c:if test="${user.gender == 1}">checked</c:if>/>남 자
+					<input type="radio" name="gender" id="gender" value="2" disabled <c:if test="${user.gender == 2}">checked</c:if>/>여 자</li>
+				<li><input type="text" name="birth" id="datepicker" maxlength="10" value="${user.birth }" disabled/>			
 			</ul>
 		</div>
 		<hr/>
 		<div id="buttons">
 			<input type="submit" class = "button" value="수정"/>
-			<input type="button" class = "button" value="회원 탈퇴"/>
+			<input type="button" class = "button" value="회원 탈퇴" onclick="location.href='/home/registDel'"/>
 		</div>
 	</form>
 </div> 

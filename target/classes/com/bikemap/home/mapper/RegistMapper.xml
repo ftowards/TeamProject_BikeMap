@@ -13,4 +13,7 @@
 	<select id="selectUser" resultType="com.bikemap.home.regist.RegistVO">
 		select userid, userpwd, username, email, gender, to_char(birth,'YYYY-MM-DD') birth from regist where userid = #{userid}
 	</select>
+	<update id="updateUser" parameterType="com.bikemap.home.regist.RegistVO">
+		update regist set userpwd = #{userpwd}, email = #{email} where userid=#{userid}
+	</update>
 </mapper> 
