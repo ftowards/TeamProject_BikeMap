@@ -11,7 +11,7 @@ body{margin:0; padding:0;}
 	
 	/*로그인,회원가입*/
 	#loginDiv{width:80%;}
-	#login{width:60%; height:50px; padding:10px 0px 0 95%;}
+	#login{width:55%; height:50px;padding:20px 0 0 95%;}
 	#loginDiv li{line-height:55px; font-size:15px; float:left; width:15%;}
 	#login>li>img{width:25px;}
 	#login>li:last-child>input{
@@ -72,3 +72,86 @@ body{margin:0; padding:0;}
 	
 	
 	.container{width:800px; margin : 0 auto;}
+	
+	/*=====================================main=====================================================*/
+
+	.shadow{
+		background-color:black;
+		opacity:0.5;
+		position: relative;
+		z-index: 100;
+	}
+	#bxslider img{
+		width:800px;
+		height:300px;
+	}
+	
+	#hitRoute{
+		width:100%;
+		height:235px;
+		text-align:center;
+	}
+	#content1{
+		height:235px;
+		padding-left:65px;
+	}
+	
+	.hitIcon{
+		width:50px;
+		height:20px;
+		margin-left:105px;
+		position:absolute;
+	}
+	.thumbnail{
+		width:155px;
+		height:155px;
+		border-top-right-radius: 10px;
+		border-top-left-radius: 10px;
+	}
+	.routeTitle{
+		font-size:17px;
+		word-spacing:-3px;
+		margin-bottom:5px;
+	}
+	.routeTitle, .sub{
+		float:left;
+	}
+	.route{
+		float:left;
+		margin-right:5px;
+	}
+	
+	#routeSearch{
+		width:83%;
+		height:40px;
+		margin-top:20px;
+		margin-left:70px;
+		padding-top:8px;
+		text-align:center;
+		background-color:#008888;
+	}
+	#routeSearch a{
+		font-size:15px;
+		color:white;
+		padding-bottom:5px;
+		text-decoration: none;
+		font-weight:bold;
+	}
+	
+	#national{
+		width:100%;
+		height:400px;
+		margin-top:30px;
+		text-align:center;
+	}
+	#location{
+		width:100%;
+		text-align:center;
+	}
+	#location img{
+		border-radius: 10px / 10px;
+		margin: 5px 2px 0px;
+		width:125px;
+		height:160px;
+	}
+	
