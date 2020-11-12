@@ -4,13 +4,64 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device, initial-scale=1"/>
 <link rel="stylesheet" href="/home/css/style.css" type="text/css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="/home/api/jquery.bxslider.css" type="text/css"/>
+<script src="/home/api/jquery.easing.1.3.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/home/api/jquery.bxslider.js"></script>
 <title>BikeMap</title>
-<style>
-</style>
+<script>
+	$(function(){
+		$("#navi>li").hover(function(){
+			$(this).children("ul").css("display","block");
+			$(this).children("div").css("display","block");
+		},function(){
+			$(this).children("ul").css("display","none");
+			$(this).children("div").css("display","none");	
+		});
+		$("#bxslider").bxSlider({
+			mode: 'fade'			//horizontal랑 fade중 고르기..
+			,slideWidth: 800		//가로
+			,slideHeight: 300		//세로
+			,auto: true				//자동 실행
+			,speed: 1000			//속도
+			,infiniteLoop: true		//무한루프
+			,autoHover: true		//마우스 hover시 화면전환 정지
+		});
+	});
+</script>
 </head>
 <body>
-<div id="header">
-1
-</div>
+<header>
+	<div>
+		<div id="logoDiv">
+			<img src="<%=request.getContextPath()%>/img/logo.png"/>
+		</div>
+		<div id="loginDiv">
+			<ul id="login">
+				<li><a href="<%=request.getContextPath()%>/login">로그인&nbsp<img src="<%=request.getContextPath()%>/img/loginIcon.png"/></a></li>
+				<li><input type="button" value="회원가입" onclick="location.href='<%=request.getContextPath()%>/registerForm'"></li>
+			</ul>
+		</div>
+	</div>	
+</header>
+	<div class="lineDiv"></div>
+	<div id="naviDiv">
+	<ul id="navi">
+		<li><a href="<%=request.getContextPath()%>/">홈</a><div id="homeLine"></div></li>
+		<li><a href="#">루트짜기</a><div id="routeLine"></div></li>
+		<li><a href="#">코스검색</a><div id="courseLine"></div></li>
+		<li><a href="#">동행찾기</a><div id="searchLine"></div>
+			<ul>
+				<li><div class="popupMenuColor"><a href="#">만들기</a></div></li>
+				<li><div class="popupMenuColor"><a href="#">검색</a></div></li>
+				<li><div class="popupMenuColor"><a href="#">참여모임</a></div></li>
+				<li><div class="popupMenuColor"><a href="#">내모임</a></div></li>
+			</ul>
+		</li>
+		<li><a href="#">후기</a><div id="reviewLine"></div></li>
+		</ul>
+	</div>
+<div class="lineDiv"></div>
