@@ -111,7 +111,7 @@
 				success : function(result){
 					if(result > 0){
 						alert("회원 가입 완료")
-						location.href="/registWelcome";
+						location.href="/home/registWelcome";
 					} else{
 						alert("회원가입에 실패하였습니다.");
 					}
