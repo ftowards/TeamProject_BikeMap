@@ -114,8 +114,6 @@ public class RegistController {
 			return mav;
 		}
 		
-		System.out.println(session.getAttribute("pwdChk"));		
-		
 		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
 		RegistVO vo = dao.selectUser((String)session.getAttribute("logId"));
 		
@@ -123,5 +121,19 @@ public class RegistController {
 		mav.setViewName("/regist/registEditForm");
 		
 		return mav;
+	}
+	
+	// 회원 정보 수정 처리
+	@RequestMapping("/registerEditFormOk")
+	@ResponseBody
+	public int registEditFormOk(RegistVO vo) {		
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		return dao.updateUser(vo);
+	}
+	
+	// 회원 탈퇴 신청 페이지 이동
+	@RequestMapping("/registDel")
+	public String registDelUser() {
+		return "regist/registDel";
 	}
 }

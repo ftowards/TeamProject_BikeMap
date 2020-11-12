@@ -3,10 +3,10 @@
 <style>
 	.container *{margin : 0 auto; text-align : center; }
 	.container>*{margin : 15px auto;}
-	#box{height : 400px; background-color : #eee;
+	#box{height : 300px; background-color : #eee;
 		 border-top : 3px solid #ccc; border-bottom : 3px solid #ccc;
 		 margin : 15px 0 ;}
-	#box div:first-child{border-bottom : 2px solid #ddd; height : 300px;}
+	#box div:first-child{border-bottom : 2px solid #ddd; height : 200px;}
 	#box p{height : 96px; line-height : 48px;}
 	.button{border : #00B0B0 2px solid; background-color : white ; border-radius: 8px;
 			text-decoration: none; text-align : center; font-size : 16px; padding : 12px 24px;
@@ -30,7 +30,7 @@
 				data : data,
 				success : function(result){
 					if(result >0 ){
-						location.href="/home/registEditForm";
+						location.href="/home/registDelForm";
 					}else{
 						alert("비밀번호가 틀립니다.");
 					}

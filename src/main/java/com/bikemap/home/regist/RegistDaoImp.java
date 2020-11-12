@@ -10,5 +10,8 @@ public interface RegistDaoImp {
 
 	// 회원 정보 선택
 	public RegistVO selectUser(String userid);
+	
+	// 회원 정보 수정
+	public int updateUser(RegistVO vo);
 
 }
