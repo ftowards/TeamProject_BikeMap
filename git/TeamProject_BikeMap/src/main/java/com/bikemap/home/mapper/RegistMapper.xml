@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bikemap.home.regist.RegistDaoImp">
+	<insert id="insertUser" parameterType="com.bikemap.home.regist.RegistVO">
+		insert into regist(userid, userpwd, username, email, gender, birth)
+		values(#{userid}, #{userpwd}, #{username}, #{email}, #{gender}, #{birth}) 
+	</insert>
+	<select id="login" resultType="com.bikemap.home.regist.RegistVO">
+		select userid, username from regist where userid = #{userid} and userpwd = #{userpwd}
+	</select>
+	<select id="selectUser" resultType="com.bikemap.home.regist.RegistVO">
+		select userid, userpwd, username, email, gender, to_char(birth,'YYYY-MM-DD') birth from regist where userid = #{userid}
+	</select>
+</mapper> 

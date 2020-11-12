@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<div id="footer">
+	<div id="topDiv">
+		<ul>
+			<li><a href="#">광고/제휴문의 &nbsp&nbsp&nbsp&nbsp|</a></li>
+			<li><a href="#">서비스문의 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|</a></li>
+			<li><a href="#">이용약관&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|</a></li>
+			<li><a href="#">여행자약관 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|</a></li>
+			<li><a href="#">가이드약관</a></li>
+		</ul>
+	</div>
+	<div id="bottomDiv">
+		<div><img src="<%=request.getContextPath()%>/img/footerLogo.png"/></div>
+<div id="bottomLogoDiv"><label>상상 속 여행을 현실로,바이크맵</label></div>
+		<div><label>www.bikemap.com</label></div>
+	</div>
+</div>
+</body>
+</html>
