@@ -1,5 +1,7 @@
 package com.bikemap.home.regist;
 
+import java.sql.ResultSet;
+
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
@@ -7,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -86,7 +89,7 @@ public class RegistController {
 	}
 	
 	// 회원 정보 수정을 위한 비밀번호 확인
-	@RequestMapping("/registEditPwdChk")
+	@RequestMapping("/registPwdChk")
 	@ResponseBody
 	public int registEditPwdChk(RegistVO vo, HttpSession session) {
 		int result = 0;
@@ -135,5 +138,88 @@ public class RegistController {
 	@RequestMapping("/registDel")
 	public String registDelUser() {
 		return "regist/registDel";
+	}
+	
+	// 회원 탈퇴 비밀번호 확인
+	@RequestMapping("/registDelChk")
+	public String registDelChk() {
+		return "regist/registDelChk";
+	}
+	
+	// 회원 탈퇴 시 비밀번호 확인 및 아이디 삭제
+	@RequestMapping("/registDelPwdChk")
+	@ResponseBody
+	public int registDelPwdChk(RegistVO vo, HttpSession session) {
+		int result = 0;
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		RegistVO resultVO = dao.login(vo);
+		
+		try {
+			if(resultVO.getUsername() != null) {
+				result = dao.delUser(vo);
+			}
+		}catch(Exception e) {
+			e.getMessage();
+		}
+		return result;
+	}
+	
+	// 회원 탈퇴 성공 메세지
+	@RequestMapping("/registDelMessage")
+	public String registDelMessage() {
+		return "regist/registDelMessage";
+	}
+	
+	// 회원정보 찾기
+	@RequestMapping("/registFindInfo")
+	public String registFirdInfo() {
+		return "regist/registFindInfo";
+	}
+	
+	// 회원 아이디 찾기
+	@RequestMapping(value = "/registFindId", method=RequestMethod.POST, produces="application/text;charset=UTF-8")
+	@ResponseBody
+	public String registFindId(RegistVO vo) {
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+
+		RegistVO resultVO = dao.registFindId(vo);
+		String result = "입력한 정보와 일치하는 회원 정보가 없습니다." ;
+		
+		try {
+			if(resultVO.getUserid() != null) { 
+				String userid = resultVO.getUserid();
+				result = userid.substring(0,3);
+				for (int i = 0 ; i < userid.length()-3 ; i++) {
+					result = result +"*";
+				}
+			}
+		}catch(Exception e) {
+			e.getMessage();
+		}
+		return result;
+	}
+	
+	// 회원 비밀번호 찾기
+	@RequestMapping(value="/registFindPwd", method=RequestMethod.POST)
+	@ResponseBody
+	public int registFindPwd(RegistVO vo) {
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		int result = 0;
+		
+		// 입력한 회원정보로 일치하는 회원 내역이 있는 지 확인
+		try {
+			RegistVO resultVO = dao.registFindPwd(vo);			
+			if(resultVO.getEmail() != null) {
+				result = 1;
+			}
+		}catch(Exception e) {
+			e.getMessage();
+		}
+		
+		if(result > 0) {
+			// 임시 비밀번호 발송하는 메서드 필요
+			// 임시 비밀번호로 db 업데이트
+		}
+		return result;
 	}
 }

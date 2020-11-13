@@ -37,7 +37,10 @@ public class RegistVO {
 		this.username = username;
 	}
 	public String getEmail() {
-		email = email1 +"@"+ email2;
+		if(email1!=null) {
+			email = email1 +"@"+ email2;
+		}
+		
 		return email;
 	}
 	public void setEmail(String email) {

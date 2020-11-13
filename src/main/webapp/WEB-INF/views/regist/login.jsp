@@ -73,7 +73,7 @@
 
 	<ul>
 		<li>아이디, 비밀번호를 잊어버리셨나요?
-			<input type="button" value="아이디/비밀번호 찾기" onclick="location.href='/home/findInfo'"/></li>
+			<input type="button" value="아이디/비밀번호 찾기" onclick="location.href='/home/registFindInfo'"/></li>
 		<li>|</li>
 		<li>아직 회원이 아니신가요?
 			<input type="button" value="회원가입" onclick="location.href='/home/registerForm'"/></li>
