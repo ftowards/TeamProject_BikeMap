@@ -16,4 +16,13 @@
 	<update id="updateUser" parameterType="com.bikemap.home.regist.RegistVO">
 		update regist set userpwd = #{userpwd}, email = #{email} where userid=#{userid}
 	</update>
+	<delete id="delUser" parameterType="com.bikemap.home.regist.RegistVO">
+		delete from regist where userid=#{userid} and userpwd=#{userpwd}
+	</delete>
+	<select id="registFindId" resultType="com.bikemap.home.regist.RegistVO" parameterType="com.bikemap.home.regist.RegistVO">
+		select userid from regist where username = #{username} and email=#{email}
+	</select>
+	<select id="registFindPwd" resultType="com.bikemap.home.regist.RegistVO" parameterType="com.bikemap.home.regist.RegistVO">
+		select email from regist where username=#{username} and userid=#{userid} and email=#{email}
+	</select>
 </mapper> 

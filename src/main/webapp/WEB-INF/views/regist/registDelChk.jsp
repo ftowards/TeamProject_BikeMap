@@ -21,7 +21,7 @@
 				return false;
 			}
 			
-			var url = "/home/registPwdChk";
+			var url = "/home/registDelPwdChk";
 			var data = $("#pwdChk").serialize();
 			
 			console.log(data);
@@ -30,9 +30,9 @@
 				data : data,
 				success : function(result){
 					if(result >0 ){
-						location.href="/home/registDelForm";
+						location.href="/home/registDelMessage";
 					}else{
-						alert("비밀번호가 틀립니다.");
+						alert("비밀번호가 틀렸습니다.");
 					}
 				},error : function(){
 					console.log("비밀번호 확인 오류");
