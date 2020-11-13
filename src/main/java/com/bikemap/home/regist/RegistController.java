@@ -1,11 +1,10 @@
 package com.bikemap.home.regist;
 
-import java.sql.ResultSet;
-
 import javax.servlet.http.HttpSession;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,10 +12,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.bikemap.home.mailng.MailHandler;
+
 @Controller
 public class RegistController {
 	
 	public SqlSession sqlSession ;
+	
+	@Autowired
+	private JavaMailSender mailSender;
 	
 	public SqlSession getSqlSession() {
 		return sqlSession;
@@ -33,14 +37,75 @@ public class RegistController {
 		return "/regist/registerForm";
 	}
 	
+	// 아이디 중복 체크
+	@RequestMapping("/idDoubleChk")
+	@ResponseBody
+	public int idDoubleChk(@RequestParam("userid") String userid) {
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		return dao.idDoubleChk(userid);
+	}
+	
+	// 아이디 중복 체크
+	@RequestMapping("/emailDoubleChk")
+	@ResponseBody
+	public int emailDoubleChk(@RequestParam("email") String email) {
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		return dao.emailDoubleChk(email);
+	}
+		
 	// 회원가입 확인
 	// 회원 정보 DB 입력 후 결과값을 폼 페이지로 반환
 	@RequestMapping(value="/registerFormOk", method=RequestMethod.POST)
 	@ResponseBody
 	public int registerFormOk(RegistVO vo) {
 		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
-		return dao.insertUser(vo);
+		vo.setCode(new TempKey().qetKey());
+		
+		int result =dao.insertUser(vo);
+		
+		try {
+			if(result == 1) {
+				MailHandler sendMail = new MailHandler(mailSender);
+			        sendMail.setSubject("[바이크맵] 회원 인증 메일입니다.");
+			        
+			        sendMail.setText(
+			        		new StringBuffer().append("<h1>메일인증</h1>").
+			        		append("<a href='http://localhost:9090/home/registAuthorize?email=").
+			        		append(vo.getEmail()).append("&code=").append(vo.getCode()).
+			        		append("' target='_blank'>이메일 인증 확인</a>").toString());
+			        sendMail.setFrom("project.bikemap@gmail.com", "바이크맵");
+			        
+			        sendMail.setTo(vo.getEmail());
+		        sendMail.send();
+			}
+		}catch(Exception e) {
+			e.getStackTrace();
+		}
+		return result;
 	}
+	
+	// 인증 절차
+	@RequestMapping("/registAuthorize")
+	public ModelAndView registAuthorize(RegistVO vo) {
+		ModelAndView mav = new ModelAndView();		
+		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		
+		vo = dao.checkAuth(vo);
+
+		if(vo.getActive().equals("Y")) {
+			mav.addObject("msg", "이미 인증이 완료된 아이디입니다.");
+		}else {
+			if(dao.authorizeUser(vo)==1) {
+				mav.addObject("msg", vo.getUsername()+"님 인증이 완료되었습니다. 로그인 후 이용해주십시오.");
+			}else {
+				mav.addObject("msg", "인증에 실패했습니다. 다시 시도해주십시오.");
+			}
+		}
+
+		mav.setViewName("regist/authorResult");	
+		return mav;
+	}
+	
 	
 	// 회원 가입 완료 시 이동하는 주소
 	@RequestMapping("/registWelcome")
