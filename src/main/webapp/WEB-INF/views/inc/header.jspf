@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="/home/css/style2.css" type="text/css"/>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="/home/api/jquery.bxslider.css" type="text/css"/>
-<script src="/home/api/jquery.easing.1.3.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/home/api/jquery.bxslider.js"></script>
 <title>BikeMap</title>
@@ -41,7 +40,7 @@
 		</div>
 		<div id="loginDiv">
 			<ul id="login">
-				<li><a href="<%=request.getContextPath()%>/login">로그인&nbsp<img src="<%=request.getContextPath()%>/img//img_main/loginIcon.png"/></a></li>
+				<li><a href="<%=request.getContextPath()%>/login">로그인&nbsp<img src="<%=request.getContextPath()%>/img/img_main/loginIcon.png"/></a></li>
 				<li><input type="button" value="회원가입" onclick="location.href='<%=request.getContextPath()%>/registerForm'"></li>
 			</ul>
 		</div>

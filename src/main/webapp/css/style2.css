@@ -93,13 +93,14 @@ body{margin:0; padding:0;}
 	}
 	#content1{
 		height:235px;
+		margin-top:130px;
 		padding-left:65px;
 	}
 	
 	.hitIcon{
-		width:50px;
-		height:20px;
-		margin-left:105px;
+		width:70px;
+		height:30px;
+		margin-left:85px;
 		position:absolute;
 	}
 	.thumbnail{
@@ -142,10 +143,12 @@ body{margin:0; padding:0;}
 		width:100%;
 		height:400px;
 		margin-top:30px;
+		margin-bottom:150px;
 		text-align:center;
 	}
 	#location{
 		width:100%;
+		margin-top:50px;
 		text-align:center;
 	}
 	#location img{
