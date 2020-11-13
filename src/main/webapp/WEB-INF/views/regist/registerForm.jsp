@@ -37,6 +37,7 @@
 		});
 		
 		var idChk = "N";
+		var emailChk = "N";
 		var regId = /^[A-Za-z]{1}\w{7,11}$/ ;
 		var regName = /^[가-힣]{2,5}$/ ;
 		
@@ -44,8 +45,33 @@
 		// 아이디 중복 검사 로직
 		// 아이디 정규식 체크	
 		$("#idChk").click(function(){
+			if($("#userid").val()==""){
+				alert("아이디를 입력하세요.");
+				return false;
+			} 
+
+			if(!regId.test($("#userid").val())){
+				alert("아이디는 8~12자리\n영문자로 시작하여야 하고, 숫자와 특수문자 _ 만 사용 가능합니다.");
+				return false;
+			}
 			
-			idChk = "Y";
+			var url = "/home/idDoubleChk";
+			var data = "userid="+$("#userid").val();
+			$.ajax({
+				url : url,
+				data : data,
+				success : function(result){
+					if(result == 0){
+						idChk = "Y";
+						alert("사용 가능한 아이디 입니다.");
+					}else{
+						alert("이미 사용 중인 아이디입니다.");
+					}
+				},error : function(){
+					console.log("중복 체크 에러");
+				}
+			});
+			return false;
 		});
 		
 		// 아이디 칸 입력 시 중복 체크 여부는 초기화
@@ -55,18 +81,47 @@
 		
 		$("#domainSelect").on({'change' : function(){
 			$("#email2").val($("#domainSelect").val());
+			emailChk = "N";
 		}});
 		
+		// 이메일 중복 검사 로직	
+		$("#emailChk").click(function(){
+			if($("#email1").val()=="" || $("#email2").val=="" ){
+				alert("이메일을 입력하세요.");
+				return false;
+			}
+			
+			var url = "/home/emailDoubleChk";
+			var data = "email="+$("#email1").val()+"@"+$("#email2").val()
+			$.ajax({
+				url : url,
+				data : data,
+				success : function(result){
+					if(result == 0){
+						emailChk = "Y";
+						alert("사용 가능한 이메일입니다.");
+					}else{
+						alert("이미 등록된 메일 주소입니다.");
+					}
+				},error : function(){
+					console.log("중복 체크 에러");
+				}
+			});
+			return false;
+		});
+		
+		// 이메일 입력 시 중복 체크 여부는 초기화
+		$("#email1").keydown(function(){
+			emailChk = "N";
+		});		
+		$("#email2").keydown(function(){
+			emailChk = "N";
+		});
 		
 		// 입력사항 체크
-		$("#registerForm").submit(function(){
-			if($("#userid").val()==""){
-				alert("아이디를 입력하세요.");
-				return false;
-			} 
-			
+		$("#registerForm").submit(function(){			
 			if(idChk != "Y"){
-				alert("아이디 중복 체크를 하세요.");
+				alert("아이디 중복 검사를 하세요.");
 				return false;
 			}
 			
@@ -91,8 +146,8 @@
 				return false;
 			}
 			
-			if($("#email1").val()=="" || $("#email2").val=="" ){
-				alert("이메일을 입력하세요.");
+			if(emailChk != "Y"){
+				alert("이메일 중복 검사를 하세요.");
 				return false;
 			}
 			
@@ -100,7 +155,6 @@
 				alert("생일을 선택하세요.");
 				return false;
 			}
-			
 			
 			var url = "/home/registerFormOk"
 			var data = $("#registerForm").serialize();
@@ -153,7 +207,9 @@
 						<option value="google.com">google.com</option>
 						<option value="daum.net">daum.net</option>
 						<option value="hotmali.com">hotmail.com</option>
-					</select></li>
+					</select>
+					<input type="button" class="button" id="emailChk" value="중복검사"/>
+					</li>
 				<li><input type="radio" name="gender" id="gender" value="1"/>남 자
 					<input type="radio" name="gender" id="gender" value="2" checked/>여 자</li>
 				<li><input type="text" name="birth" id="datepicker" maxlength="10"/>

@@ -22,5 +22,16 @@ public interface RegistDaoImp {
 	
 	// 회원 비밀번호 찾기 - 일치하는 정보가 있는 지 확인
 	public RegistVO registFindPwd(RegistVO vo);
-
+	
+	// 인증되어 있는지 확인
+	public RegistVO checkAuth(RegistVO vo);
+	
+	// 아이디 활성화
+	public int authorizeUser(RegistVO vo);
+	
+	// 아이디 중복 확인
+	public int idDoubleChk(String userid);
+	
+	// 이메일 중복 확인
+	public int emailDoubleChk(String email);
 }
