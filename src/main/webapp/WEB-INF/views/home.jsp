@@ -47,7 +47,7 @@
 	</div>
 	<div id="routeSearch">
 		<sub><img style='width:4%' src="<%=request.getContextPath() %>/img/img_main/search.png"/></sub>
-		<a href="#">최근 다녀온 156개 루트 검색</a>
+		<a href="#">최근 다녀온 200개 루트 검색</a>
 	</div>
 	
 	<div id="national">
