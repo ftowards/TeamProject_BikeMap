@@ -1,80 +1,228 @@
 @charset "UTF-8";
-body{margin:0; padding:0;}
-	ul,li{margin:0px; padding:0px;list-style-type:none;} 
-	ul{list-style-type:none;}
-	/*=====================================header========================================================*/
-	header{margin:0;padding:0; height:100px;}
+	body{
+		margin:0;
+		padding:0;
+	}
+	ul,li{
+		margin:0px;
+		padding:0px;
+	} 
+	ul{
+		list-style-type:none;
+	}
 	
-	#logoDiv{text-align:right;width:55%;position:absolute;}
-	.lineDiv{background-color:rgb(64,64,64); height:2px;}
+	
+	
+	/*===================================header===================================*/
+	header{
+		margin:0;
+		padding:0;
+		height:100px;
+	}
+	
+	#logoDiv{
+		text-align:right;
+		width:55%;
+		position:absolute;
+	}
+	.lineDiv{
+		background-color:#404040;
+		height:2px;
+	}
+	
 	
 	
 	/*로그인,회원가입*/
-	#loginDiv{width:80%;}
-	#login{width:55%; height:50px;padding:20px 0 0 95%;}
-	#loginDiv li{line-height:55px; font-size:15px; float:left; width:15%;}
-	#login>li>img{width:25px;}
+	#loginDiv{
+		width:80%;
+	}
+	#login{
+		width:55%;
+		height:50px;
+		padding:20px 0 0 95%;
+	}
+	#loginDiv li{
+		line-height:55px;
+		font-size:15px;
+		float:left;
+		width:15%;
+	}
+	#login>li>img{
+		width:25px;
+	}
 	#login>li:last-child>input{
-								border:1px solid rgb(0,176,176);
-								border-radius:10px;
-								width:100px;
-								height:40px;
-								background-color:#fff;
-								color:rgb(0,176,176);
-								font-size:15px;}
+		border:1px solid #00B0B0;
+		border-radius:10px;
+		width:100px;
+		height:40px;
+		background-color:#fff;
+		color:#00B0B0;
+		font-size:15px;
+	}
+			
+			
 								
 	/*로그인 링크*/
-	#login a:link,#login a:visited{text-decoration:none; color:rgb(123,123,123);}	
+	#login a:link,#login a:visited{
+		text-decoration:none;
+		color:#7B7B7B;
+	}	
 					
 	
+	
 	/*네비게이션*/
-	#naviDiv{width:800px; margin:0 auto;}
-	#navi{height:50px; padding-bottom:10px}
-	#navi li{text-align:center; line-height:55px; font-size:20px;}
-	#navi>li{float:left; width:20%; height:50px;}
-	#navi>li>ul{display:none; position:relative; border:3px solid rgb(221,221,221);background-color:#fff; z-index:100;}	
+	#naviDiv{
+		width:800px;
+		margin:0 auto;
+	}
+	#navi{
+		height:50px;
+		padding-bottom:10px;
+	}
+	#navi li{
+		text-align:center;
+		line-height:55px;
+		font-size:20px;
+	}
+	#navi>li{
+		float:left;
+		width:20%;
+		height:50px;
+	}
+	#navi>li>ul{
+		display:none;
+		position:relative;
+		border:3px solid #DDDDDD;
+		background-color:#fff;
+		z-index:100;
+	}	
+
 
 	 
 	 /*홈,루트짜기,코스검색,동행찾기,후기-->파란밑줄 선*/
-	#navi li #homeLine{margin:0 auto; width:20px; height:2px; background-color:rgb(0,176,176);  display:none;}
-	#navi li #routeLine{margin:0 auto; width:70px; height:2px; background-color:rgb(0,176,176); display:none;} 
-	#navi li #courseLine{margin:0 auto; width:70px; height:2px; background-color:rgb(0,176,176); display:none;} 
-	#navi li #searchLine{margin:0 auto; width:70px; height:2px; background-color:rgb(0,176,176); display:none;} 
-	#navi li #reviewLine{margin:0 auto; width:40px; height:2px; background-color:rgb(0,176,176); display:none;} 
+	#navi li #homeLine{
+		margin:0 auto;
+		width:20px;
+		height:2px;
+		background-color:#00B0B0;
+		display:none;
+	}
+	#navi li #routeLine{
+		margin:0 auto; 
+		width:70px; 
+		height:2px; 
+		background-color:#00B0B0; 
+		display:none;
+	} 
+	#navi li #courseLine{
+		margin:0 auto; 
+		width:70px; 
+		height:2px; 
+		background-color:#00B0B0; 
+		display:none;
+	} 
+	#navi li #searchLine{
+		margin:0 auto; 
+		width:70px; 
+		height:2px; 
+		background-color:#00B0B0; 
+		display:none;
+	} 
+	#navi li #reviewLine{
+		margin:0 auto; 
+		width:40px; 
+		height:2px; 
+		background-color:#00B0B0; 
+		display:none;
+	} 
 	
 
 
 	/*링크*/
-	#navi a:link,#navi a:visited{text-decoration:none;color:rgb(64,64,64);}
-	#navi a:hover{text-decoration:none; color:rgb(64,64,64);}
+	#navi a:link,#navi a:visited{
+		text-decoration:none;
+		color:#404040;
+	}
+	#navi a:hover{
+		text-decoration:none;
+		color:#404040;
+	}
 	
-	.popupMenuColor:hover{background-color:rgb(221,221,221); height:55.5px;font-weight:bold;}
+	.popupMenuColor:hover{
+		background-color:#DDDDDD;
+		height:55.5px;
+		font-weight:bold;
+	}
 
-	/*================================================footer==================================================================*/
-	#footer{margin:0;padding:0;}
-	#topDiv{height:64px; background-color:rgb(55,55,65);}
-	#bottomDiv{height:162px;background-color:rgb(69,69,79);}
-	
-	
-	#topDiv li{float:left; width:10%; font-size:13px;line-height:60px;}
-	#topDiv>ul{margin-left:100px;}
-	
-	#bottomDiv div:first-child{position:absolute; padding:40px 0 0 75px;width:60%; height:70px;}
-	#bottomDiv div:first-child>img{width:180px; height:75px;}
-	
-	#bottomDiv>#bottomLogoDiv{width:52%;height:80px;text-align:center;}
-	#bottomDiv #bottomLogoDiv>label{color:rgb(123,123,123);font-size:12px;line-height:120px;}
-	
-	#bottomDiv div:last-child{width:47.5%;height:80px;text-align:center;}
-	#bottomDiv div:last-child>label{color:rgb(123,123,123);font-size:12px;}
-	
-	#topDiv a:link,#topDiv a:visited{text-decoration:none; color:rgb(123,123,123);}
-	
-	
-	.container{width:800px; margin : 0 auto;}
-	
-	/*=====================================main=====================================================*/
 
+
+	/*===================================footer===================================*/
+	#footer{
+		margin:0;
+		padding:0;
+	}
+	#topDiv{
+		height:64px;
+		background-color:#373741;
+	}
+	#bottomDiv{
+		height:162px;
+		background-color:#45454F;
+	}
+	#topDiv li{
+		float:left;
+		width:10%;
+		font-size:13px;
+		line-height:60px;
+	}
+	#topDiv>ul{
+		margin-left:100px;
+	}
+	
+	#bottomDiv div:first-child{
+		position:absolute;
+		padding:40px 0 0 75px;
+		width:60%;
+		height:70px;
+	}
+	#bottomDiv div:first-child>img{
+		width:180px;
+		height:75px;
+	}
+	
+	#bottomDiv>#bottomLogoDiv{
+		width:52%;
+		height:80px;
+		text-align:center;
+	}
+	#bottomDiv #bottomLogoDiv>label{
+		color:#7B7B7B;
+		font-size:12px;
+		line-height:120px;
+	}
+	
+	#bottomDiv div:last-child{
+		width:47.5%;
+		height:80px;
+		text-align:center;
+	}
+	#bottomDiv div:last-child>label{
+		color:#7B7B7B;
+		font-size:12px;
+	}
+	
+	#topDiv a:link,#topDiv a:visited{
+		text-decoration:none;
+		color:#7B7B7B;
+	}
+	.container{
+		width:800px;
+		margin : 0 auto;
+	}
+	
+	
+	
+	/*===================================main===================================*/
 	.shadow{
 		background-color:black;
 		opacity:0.5;
@@ -93,6 +241,7 @@ body{margin:0; padding:0;}
 	}
 	#content1{
 		height:235px;
+		margin-top:130px;
 		padding-left:65px;
 	}
 	
@@ -138,14 +287,18 @@ body{margin:0; padding:0;}
 		font-weight:bold;
 	}
 	
+	
+	
 	#national{
 		width:100%;
 		height:400px;
 		margin-top:30px;
+		margin-bottom:150px;
 		text-align:center;
 	}
 	#location{
 		width:100%;
+		text-align:center;
 		text-align:center;
 	}
 	#location img{
@@ -153,5 +306,114 @@ body{margin:0; padding:0;}
 		margin: 5px 2px 0px;
 		width:125px;
 		height:160px;
+	}
+	
+	
+	
+	/*===================================login===================================*/
+	.container *{
+		margin : 0 auto;
+	}
+	.container >*{
+		margin : 15px auto;
+	}
+	
+	#bikeDiv{
+		width:760px;
+		height:320px;
+		margin:0 auto;
+	}
+	#bikeDiv1, #bikeDiv2{
+		height:150px;
+	}
+	#bikeDiv1{
+		width:32%;
+		text-align:right;
+		padding-right:15px;
+		padding-top:140px;
+		display: inline-block;
+	}
+	#bikeDiv1 img{
+		width:80px;
+		height:140px;
+	}
+	#bikeDiv2{
+		float:right;
+		width:65%;
+		padding-top:160px;
+	}
+	
+	.contentText{
+		letter-spacing:-2px;
+		line-height:25px;
+		margin:0 auto;
+	}
+	
+	#loginForm{
+		height : 170px;
+		background-color : #eee;
+	}
+	
+	#input{
+		margin:0 auto;
+		background-color:yellow;
+	}
+	
+	
+	.inputBox1:{
+		width:270px;
+		height:30px;
+	}
+	
+	
+	.mint_Btn{
+		font-weight:bold;
+		border-radius: 10px;
+		text-decoration: none;
+		text-align : center;
+		color : white;
+		border: 1px solid #00B0B0;
+		background-color: #00B0B0;
+	}
+	
+	.button:hover{
+		color : #00B0B0;
+		background-color: white
+	}
+	
+	#loginForm>div{
+		float:left;
+		height : 120px;
+		margin-left:50px;
+		line-height : 173px;
+	}
+	form li{
+		float:left;
+		width : 60%;
+		padding-left : 10%;
+		line-height : 60px;
+	}
+	form li:nth-of-type(2n+1){
+		width : 20%;
+	}
+	
+	#button{
+		width : 20%;
+		height : 120px;
+	}
+	
+	#find_Info{
+		font-size:15px;
+		font-weight:bold;
+		margin-bottom:200px;
+	}
+	.white_Btn{
+		color: #5D5D5D;
+		font-weight:bold;
+		border: 2px solid #8C8C8C;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align : center;
+		background-color: white;
 	}
 	

@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device, initial-scale=1"/>
-<link rel="stylesheet" href="/home/css/style2.css" type="text/css"/>
+<link rel="stylesheet" href="/home/css/style.css" type="text/css"/>
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="stylesheet" href="/home/api/jquery.bxslider.css" type="text/css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
