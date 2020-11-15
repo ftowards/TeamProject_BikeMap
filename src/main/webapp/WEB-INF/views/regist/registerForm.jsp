@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/home/css/register.css" type="text/css"/>
  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <style>
@@ -49,7 +50,6 @@
 				alert("아이디를 입력하세요.");
 				return false;
 			} 
-
 			if(!regId.test($("#userid").val())){
 				alert("아이디는 8~12자리\n영문자로 시작하여야 하고, 숫자와 특수문자 _ 만 사용 가능합니다.");
 				return false;

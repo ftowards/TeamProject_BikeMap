@@ -36,7 +36,7 @@
 <header>
 	<div>
 		<div id="logoDiv">
-			<img src="<%=request.getContextPath()%>/img/img_logo/logo.png"/>
+			<img src="<%=request.getContextPath()%>/img/img_logo/logo.png" onclick="location.href='<%=request.getContextPath()%>'"/>
 		</div>
 		<div id="loginDiv">
 			<ul id="login">

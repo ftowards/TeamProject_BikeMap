@@ -1,0 +1,131 @@
+	/*===================================login===================================*/
+	.container *{
+		margin : 0 auto;
+	}
+	.container >*{
+		margin : 15px auto;
+	}
+	
+	#bikeDiv{
+		width:760px;
+		height:320px;
+		margin:0 auto;
+	}
+	#bikeDiv1, #bikeDiv2{
+		height:150px;
+	}
+	#bikeDiv1{
+		width:32%;
+		text-align:right;
+		padding-right:15px;
+		padding-top:140px;
+		display: inline-block;
+	}
+	#bikeDiv1 img{
+		width:80px;
+		height:140px;
+	}
+	#bikeDiv2{
+		float:right;
+		width:65%;
+		padding-top:160px;
+	}
+	
+	.contentText{
+		letter-spacing:-2px;
+		line-height:28px;
+		margin:0 auto;
+		margin-bottom:60px;
+		font-size:14px;
+		color:#353535
+	}
+	
+	#loginForm{
+		height : 170px;
+		background-color : #eee;
+	}
+	
+	#input{
+		width:350px;
+		height:100px;
+		margin:0 auto;
+		padding-right:50px;
+		background-color:yellow;
+	}
+	#idDiv{
+		margin:0px;
+		width:300px;
+		height:120px;
+		word-break:break-all;
+		background-color:pink;
+	}
+	
+	#userid:{
+		width:270px;
+		height:30px;
+	}
+	
+	
+	.mint_Btn{
+		font-size:18px;
+		font-weight:bold;
+		border-radius: 10px;
+		text-decoration: none;
+		text-align : center;
+		padding:28px 40px;
+		margin:0 10px;
+		color : white;
+		border: 1px solid #00B0B0;
+		background-color: #00B0B0;
+	}
+	
+	.button:hover{
+		color : #00B0B0;
+		font-weight:bold;
+		background-color: white
+	}
+	
+	#loginForm>div{
+		float:left;
+		height : 120px;
+		margin-left:50px;
+		line-height : 173px;
+	}
+	form li{
+		float:left;
+		width : 60%;
+		padding-left : 10%;
+		line-height : 60px;
+	}
+	form li:nth-of-type(2n+1){
+		width : 20%;
+	}
+	
+	#button{
+		width : 20%;
+		height : 120px;
+	}
+	
+	#find_Info{
+		font-size:15px;
+		font-weight:bold;
+		margin-bottom:200px;
+	}
+	.white_Btn{
+		color: #5D5D5D;
+		font-weight:bold;
+		border: 2px solid #8C8C8C;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align : center;
+		background-color: white;
+		padding:3px 6px;
+	}
+	#text1{
+		color:#D8D8D8;
+		padding-left:70px;
+		font-size:20px;
+	}
+	#text2{
+		float:right;
+	}

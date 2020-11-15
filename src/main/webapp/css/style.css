@@ -2,6 +2,8 @@
 	body{
 		margin:0;
 		padding:0;
+		overflow-x:hidden;
+		overflow-y:auto;
 	}
 	ul,li{
 		margin:0px;
@@ -29,8 +31,7 @@
 		background-color:#404040;
 		height:2px;
 	}
-	
-	
+
 	
 	/*로그인,회원가입*/
 	#loginDiv{
@@ -229,6 +230,12 @@
 		position: relative;
 		z-index: 100;
 	}
+		
+	.bx-wrapper {
+    	-moz-box-shadow: none !important;
+    	-webkit-box-shadow: none !important;
+     	box-shadow: none !important;
+   }
 	#bxslider img{
 		width:800px;
 		height:300px;
@@ -307,113 +314,3 @@
 		width:125px;
 		height:160px;
 	}
-	
-	
-	
-	/*===================================login===================================*/
-	.container *{
-		margin : 0 auto;
-	}
-	.container >*{
-		margin : 15px auto;
-	}
-	
-	#bikeDiv{
-		width:760px;
-		height:320px;
-		margin:0 auto;
-	}
-	#bikeDiv1, #bikeDiv2{
-		height:150px;
-	}
-	#bikeDiv1{
-		width:32%;
-		text-align:right;
-		padding-right:15px;
-		padding-top:140px;
-		display: inline-block;
-	}
-	#bikeDiv1 img{
-		width:80px;
-		height:140px;
-	}
-	#bikeDiv2{
-		float:right;
-		width:65%;
-		padding-top:160px;
-	}
-	
-	.contentText{
-		letter-spacing:-2px;
-		line-height:25px;
-		margin:0 auto;
-	}
-	
-	#loginForm{
-		height : 170px;
-		background-color : #eee;
-	}
-	
-	#input{
-		margin:0 auto;
-		background-color:yellow;
-	}
-	
-	
-	.inputBox1:{
-		width:270px;
-		height:30px;
-	}
-	
-	
-	.mint_Btn{
-		font-weight:bold;
-		border-radius: 10px;
-		text-decoration: none;
-		text-align : center;
-		color : white;
-		border: 1px solid #00B0B0;
-		background-color: #00B0B0;
-	}
-	
-	.button:hover{
-		color : #00B0B0;
-		background-color: white
-	}
-	
-	#loginForm>div{
-		float:left;
-		height : 120px;
-		margin-left:50px;
-		line-height : 173px;
-	}
-	form li{
-		float:left;
-		width : 60%;
-		padding-left : 10%;
-		line-height : 60px;
-	}
-	form li:nth-of-type(2n+1){
-		width : 20%;
-	}
-	
-	#button{
-		width : 20%;
-		height : 120px;
-	}
-	
-	#find_Info{
-		font-size:15px;
-		font-weight:bold;
-		margin-bottom:200px;
-	}
-	.white_Btn{
-		color: #5D5D5D;
-		font-weight:bold;
-		border: 2px solid #8C8C8C;
-		border-radius: 5px;
-		text-decoration: none;
-		text-align : center;
-		background-color: white;
-	}
-	
