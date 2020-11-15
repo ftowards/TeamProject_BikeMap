@@ -1,0 +1,182 @@
+/*==============================registEditForm==============================*/
+	.container{
+		overflow:hidden;
+	}
+	#registerForm{
+		margin-top:50px;
+	}
+	hr{
+		border:0;
+		width:725px;
+		background-color:black;
+		height:2px;
+	}
+	#label{
+		width : 30%;
+		margin-right : 4%;
+	}
+	#label li{
+		top-margin:15px;
+		text-align : right;
+		font-size : 1em;
+		font-weight: bold;
+	}
+	.redTxt{
+		color:red;
+	}
+	#input{
+		width : 62%;
+	}
+	form>div{
+		float:left;
+	}
+	form li{
+		height : 45px;
+		line-height : 50px;
+	}
+	
+	#input input[type=text],input[type=password], select{
+		height : 25px;
+		font-size:.9em
+	}
+	#input li{
+		height : 45px;
+		font-size:1.1em;
+	}
+	.i1{
+		width:170px;
+	}
+	.i2{
+		width:250px;
+	}
+	.i3{
+		width:108px;
+	}
+	.tlbl{
+		font-size:0.9em;
+	}
+	.gray_Btn{
+		font-size:12px;
+		width:70px;
+		height:30px;
+		color: #5D5D5D;
+		font-weight:bold;
+		border: 1px solid #8C8C8C;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align : center;
+		background-color: #eee;
+		padding:2px 4px;
+	}
+	#buttons{
+		width : 100%;
+		height : 80px;
+		overflow:auto;
+		line-height : 50px;
+		text-align : center;
+		margin-top : 25px;
+	}
+	.mint_Btn{
+		width:120px;
+		height:40px;
+		font-size:15px;
+		font-weight:bold;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align : center;
+		padding:3px 6px;
+		margin:0 10px;
+		color : white;
+		border: 1px solid #00B0B0;
+		background-color: #00B0B0;
+	}
+	.WMint_Btn{
+		width:120px;
+		height:40px;
+		font-size:15px;
+		font-weight:bold;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align : center;
+		padding:3px 6px;
+		margin:0 10px;
+		color : #00B0B0;
+		border: 2px solid #00B0B0;
+		background-color: white;
+	}
+	.mint_Btn:hover{
+		color : white;
+		background-color: #00B0B0;
+	}
+	
+	#idChk{
+		font-size : 12px;
+		padding : 6px 12px;
+	}
+	.reg{
+		color:#00B0B0;
+		font-size : 12px;
+		font-weight:bold;
+	}
+	
+	
+	
+	
+	/*===============================registerForm===============================*/
+	
+	
+	
+	
+	
+	/*==============================registFindInfo==============================*/
+	form{
+		margin : 20px 0;
+	}
+	#hr2{
+		border:0;
+		width:50px;
+		background-color:#00B0B0;
+		height:2px;
+	}
+	.l{
+		font-size:1.1em;
+		color:#00B0B0;
+		font-weight:900;
+	}
+	#cntbox{
+		margin-bottom:200px;
+	}
+	#findId, #findPwd{
+		font-size:1.2em;
+	}
+	#findIdForm>input, #findPwdForm>input{
+		width : 60%;
+		height : 40px;
+		line-height : 40px;
+		margin : 3px 0;
+	}
+	#t1{
+		font-size:0.9em;
+		line-height:24px;
+		margin:30px 0 50px 0;
+	}
+	.button{
+		border : #00B0B0 2px solid;
+		border-radius: 6px;
+		width : 61%;
+		height : 40px;
+		text-decoration: none;
+		text-align : center;
+		font-size : 16px;
+		padding : 0px 24px;
+		color : white;
+		background-color: #00B0B0
+	}
+	.button:hover{
+		color : #00B0B0;
+		background-color: white
+	}	
+	
+	
+	
+	/*==============================registWelcome==============================*/

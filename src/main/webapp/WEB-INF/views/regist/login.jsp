@@ -46,11 +46,15 @@
 	<form  id="loginForm">
 		<div id="input">
 			<div id="idDiv">
-				ID <input type="text" name="userid" id="userid"/><br/>
-				PASSWORD <input type="password" name="userpwd" id="userpwd"/>
+				<div id="idlbl">ID</div>
+				<div id="pwlbl">PASSWORD</div>
+				<div>
+					<input type="text" name="userid" id="userid" style='width:270px; height:25px;'/>
+					<input type="password" name="userpwd" id="userpwd" style='width:270px; height:25px;'/>
+				</div>
 			</div>
 		</div>
-		<div id="button"><input type="submit" class="mint_Btn" value="로그인"/></div>
+		<div id="loginBtn"><input type="submit" class="mint_Btn" value="로그인"/></div>
 	</form>
 		<p class="contentText">
 			- 아이디 및 비밀번호는 영문 대소문자를 구별하오니 입력 시 주의하시기 바랍니다.<br/>

@@ -8,7 +8,7 @@
 	
 	#bikeDiv{
 		width:760px;
-		height:320px;
+		height:280px;
 		margin:0 auto;
 	}
 	#bikeDiv1, #bikeDiv2{
@@ -18,7 +18,7 @@
 		width:32%;
 		text-align:right;
 		padding-right:15px;
-		padding-top:140px;
+		padding-top:120px;
 		display: inline-block;
 	}
 	#bikeDiv1 img{
@@ -28,7 +28,7 @@
 	#bikeDiv2{
 		float:right;
 		width:65%;
-		padding-top:160px;
+		padding-top:120px;
 	}
 	
 	.contentText{
@@ -43,6 +43,7 @@
 	#loginForm{
 		height : 170px;
 		background-color : #eee;
+		margin-left:40px;
 	}
 	
 	#input{
@@ -50,21 +51,17 @@
 		height:100px;
 		margin:0 auto;
 		padding-right:50px;
-		background-color:yellow;
 	}
 	#idDiv{
-		margin:0px;
-		width:300px;
+		width:100%;
 		height:120px;
-		word-break:break-all;
-		background-color:pink;
+		background-color:yellow;
+		text-align:left;
 	}
-	
-	#userid:{
-		width:270px;
-		height:30px;
-	}
-	
+	#idlbl, #pwlbl{
+		font-size:1.1em;
+		font-weight:bold;
+	}	
 	
 	.mint_Btn{
 		font-size:18px;
@@ -101,9 +98,10 @@
 		width : 20%;
 	}
 	
-	#button{
+	#loginBtn{
 		width : 20%;
 		height : 120px;
+		background-color:pink;
 	}
 	
 	#find_Info{

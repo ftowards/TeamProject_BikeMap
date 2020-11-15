@@ -224,13 +224,6 @@
 	
 	
 	/*===================================main===================================*/
-	.shadow{
-		background-color:black;
-		opacity:0.5;
-		position: relative;
-		z-index: 100;
-	}
-		
 	.bx-wrapper {
     	-moz-box-shadow: none !important;
     	-webkit-box-shadow: none !important;

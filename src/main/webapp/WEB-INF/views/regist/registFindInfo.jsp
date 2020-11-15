@@ -1,14 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<style>
-	form{margin : 20px 0 ;}
-	#findIdForm>input, #findPwdForm>input{width : 60%; height : 40px; line-height : 40px; margin : 3px 0; }
-	.button{border : #00B0B0 2px solid; border-radius: 8px; width : 60%; height : 40px;
-			text-decoration: none; text-align : center; font-size : 16px; padding : 0px 24px;
-			color : white; background-color: #00B0B0 }
-	.button:hover{color : #00B0B0; background-color: white}
-	
-</style>
+<link rel="stylesheet" href="/home/css/registerForm.css" type="text/css"/>
 <script>
 	$(function(){
 		$("#findIdForm").submit(function(){
@@ -55,26 +47,25 @@
 	});
 </script>
 
-<div class="container">
-	<h1>아이디 비밀번호 찾기</h1>
-	<hr/>
+<div class="container" style='text-align:center'>
+	<h1 style='margin-top:70px'>아이디 비밀번호 찾기</h1>
+	<hr id="hr2"/>
+	<p id="t1">아이디 비밀번호를 잊어버리셨나요?<br/>
+	가입 시 등록한 이메일을 입력하시면 개인번호 찾기가 가능합니다.</p>
 	
-	<h4>아이디 비밀번호를 잊어버리셨나요?</h4>
-	<h4>가입 시 등록한 이메일을 입력하시면 개인번호 찾기가 가능합니다.</h4>
-	
-	<div>
-		<b id="findId">아이디 찾기</b>
+	<div id="cntbox">
+		<b id="findId"><span class="l">|</span> 아이디 찾기</b>
 		<form id="findIdForm">
-			<input type="text" name="username" placeholder="이름을 입력해주세요."/><br/>
-			<input type="text" name="email" placeholder="가입 시 등록한 이메일을 입력해주세요."/>
-			<input type="submit" class="button" value= "아이디 찾기"/>
+			<input type="text" name="username" placeholder="  이름을 입력해주세요."/><br/>
+			<input type="text" name="email" placeholder="  가입 시 등록한 이메일을 입력해주세요."/>
+			<input type="submit" class="button" value= " 아이디 찾기"/>
 		</form>
 		
-		<b id="findPwd">비밀번호 찾기</b>
+		<b id="findPwd"><span class="l">|</span> 비밀번호 찾기</b>
 		<form id="findPwdForm">
-			<input type="text" name="username" placeholder="이름을 입력해주세요."/><br/>
-			<input type="text" name="userid" placeholder="아이디를 입력해주세요."/><br/>
-			<input type="text" name="email" placeholder="가입 시 등록한 이메일을 입력해주세요."/>
+			<input type="text" name="username" placeholder="  이름을 입력해주세요."/><br/>
+			<input type="text" name="userid" placeholder="  아이디를 입력해주세요."/><br/>
+			<input type="text" name="email" placeholder="  가입 시 등록한 이메일을 입력해주세요."/>
 			<input type="submit" class="button" value= "비밀번호 찾기"/>
 		</form>
 		<input type="button" class="button" value="login" onclick="location.href='/home/login'"/>
