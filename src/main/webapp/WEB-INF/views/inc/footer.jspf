@@ -11,10 +11,11 @@
 		</ul>
 	</div>
 	<div id="bottomDiv">
-		<div><img src="<%=request.getContextPath()%>/img/img_logo/footerLogo.png"/></div>
+		<div><img src="<%=request.getContextPath()%>/img/img_logo/logo_footer.png"/></div>
 <div id="bottomLogoDiv"><label>상상 속 여행을 현실로,바이크맵</label></div>
 		<div><label>www.bikemap.com</label></div>
 	</div>
+</div>
 </div>
 </body>
 </html>

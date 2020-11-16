@@ -1,0 +1,114 @@
+	/*===================================login===================================*/
+	.registerMainDiv *{
+		
+		margin : 0 auto;
+	}
+
+	#bikeDiv{
+		width:760px;
+		height:280px;
+		margin:0 auto;
+		padding:0;
+	}
+	#bikeDiv1, #bikeDiv2{
+		height:150px;
+	}
+	#bikeDiv1{
+		width:32%;
+		text-align:right;
+		padding-right:15px;
+		padding-top:120px;
+		display: inline-block;
+	}
+	#bikeDiv1 img{
+		width:80px;
+		height:140px;
+	}
+	#bikeDiv2{
+		float:right;
+		width:65%;
+		padding-top:120px;
+	}
+	
+	.contentText{
+		width:800px;
+		letter-spacing:-2px;
+		line-height:28px;
+		margin:0 auto;
+		margin-bottom:60px;
+		font-size:14px;
+		color:#353535
+	}
+	#loginDiv2{
+		width:800px;
+		margin:0 auto;
+		height : 170px;
+		background-color : #eee;
+	
+	}
+	#useridDiv{
+	
+		margin:0 auto;
+		padding:40px 0 0 100px;
+	}
+	#userPwddDiv{
+		position:absolute;
+		margin:0 auto;
+		padding:20px 0 0 100px;
+	}
+	
+	#loginBtnDiv{
+		position:absolute;
+		padding:0;
+		margin:-30px 0 0 550px;
+	}
+	.mint_Btn{
+		font-size:18px;
+		font-weight:bold;
+		border-radius: 10px;
+		text-decoration: none;
+		text-align : center;
+		padding:28px 40px;
+		margin:0 10px;
+		color : white;
+		border: 1px solid #00B0B0;
+		background-color: #00B0B0;
+	}
+	
+	
+	.button:hover{
+		color : #00B0B0;
+		font-weight:bold;
+		background-color: white
+	}
+
+	#loginBtn{
+		width : 20%;
+		height : 120px;
+		background-color:pink;
+	}
+	
+	#find_Info{
+		font-size:15px;
+		font-weight:bold;
+		padding-left:360px;
+		margin-bottom:100px;
+	}
+	.white_Btn{
+		color: #5D5D5D;
+		font-weight:bold;
+		border: 2px solid #8C8C8C;
+		border-radius: 5px;
+		text-decoration: none;
+		text-align : center;
+		background-color: white;
+		padding:3px 6px;
+	}
+	#text1{
+		color:#D8D8D8;
+		padding-left:70px;
+		font-size:20px;
+	}
+	#text2{
+		padding-left:70px;
+	}
