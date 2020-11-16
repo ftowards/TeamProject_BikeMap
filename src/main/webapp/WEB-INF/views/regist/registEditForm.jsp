@@ -1,27 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<<<<<<< Updated upstream
+=======
+<link rel="stylesheet" href="/home/css/registerForm.css" type="text/css"/>
+>>>>>>> Stashed changes
  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<style>
-	.container{overflow:hidden;}
-	#label{width : 36%; margin-right : 4%}
-	#label li{text-align : right; font-size : 1.2em; font-weight: bold;}
-	#input{width : 60%;}
-	form>div{float:left;}
-	form li{height : 50px; line-height : 50px;}
-	
-	#input input[type=text],input[type=password], select{height : 24px; font-size:.9em}
-	#input li{height : 50px; font-size:1.1em;}
-	#buttons{width : 100%; height : 80px; overflow:auto; line-height : 50px; text-align : center; margin-top : 25px;}
-	.button{border : #00B0B0 2px solid; background-color : white ; border-radius: 8px;
-			text-decoration: none; text-align : center; font-size : 16px; padding : 12px 24px;
-			margin : 0 10px; color: #00B0B0}
-	.button:hover{color : white; background-color: #00B0B0}
-	
-	#idChk{font-size : 12px; padding : 6px 12px;}
-	.reg{color:#55CBF5; font-size : 12px; font-weight:bold;}
-</style>
 <script>
 	$(function(){	
 		$("#domainSelect").on({'change' : function(){

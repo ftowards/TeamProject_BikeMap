@@ -22,10 +22,15 @@
 		location.href="/home/registDelChk";
 	};
 </script>
+<<<<<<< Updated upstream
 <div class="container">
 	<b>회원탈퇴</b>
 	<hr/>
 	<div id="box">
+=======
+<div class="registerMainDiv">
+	<div class="contentBox" style='height:180px; margin-top:50px; padding-top:40px;'>
+>>>>>>> Stashed changes
 		<div>
 		<h3>회원탈퇴 신청 전에 반드시 확인해주세요.</h3>
 		</div>
@@ -40,7 +45,13 @@
 	
 	<input type="checkbox" id="caution"/><label for="caution">안내사항을 모두 확인하였으며, 이에 동의합니다.</label>
 	<hr/>
+<<<<<<< Updated upstream
 	<div>
 		<input type="button" value="탈퇴" class="button" onclick="registDel()"/>
+=======
+	<div id="btnBox">
+		<input type="button" value="탈퇴신청" class="red_Btn" style="width:100px"onclick="registDel()"/>
+		<input type="button" value="홈으로" class="gray_Btn" style="width:100px" onclick="location.href='<%=request.getContextPath()%>'"/>
+>>>>>>> Stashed changes
 	</div>
 </div> 

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<<<<<<< Updated upstream
 <style>
 	.container *{margin : 0 auto; text-align : center; }
 	.container>*{margin : 15px auto;}
@@ -14,6 +15,10 @@
 	.button:hover{color : white; background-color: #00B0B0}
 </style>
 <div class="container">
+=======
+<link rel="stylesheet" href="/home/css/registerForm.css" type="text/css"/>
+<div class="registerMainDiv2">
+>>>>>>> Stashed changes
 	<h1>환영합니다!</h1>
 	<div id="box">
 		<div>

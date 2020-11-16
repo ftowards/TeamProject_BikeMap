@@ -124,8 +124,14 @@
 	});
 	
 </script>
+<<<<<<< Updated upstream
 <div class="container">
 	<form id="registerForm" method="post" action="<%=request.getContextPath()%>/registerFormOk">
+=======
+<div class="registerMainDiv" style='margin-bottom:150px'>
+	<form id="registerForm" method="post" action="<%=request.getContextPath()%>/registerFormOk">
+	<h2 style='padding-left:320px'>회원가입</h2><hr/><br/><br/>
+>>>>>>> Stashed changes
 		<div id = "label">
 			<ul>
 				<li>아이디</li>

@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<<<<<<< Updated upstream
 <div class="container">
+=======
+<div id="mainDiv">
+>>>>>>> Stashed changes
 	<div>
 	<div class="shadow"></div>
 		<ul id="bxslider">
@@ -14,7 +18,7 @@
 	</div>
 	<div id="hitRoute">
 		<div id="content1">
-			<span class="routeTitle">관리자 추천코스 여행</span><sub class="sub">561개</sub><br/><br/>
+			<span class="routeTitle">관리자 추천코스 여행</span><sub class="sub">700개</sub><br/><br/>
 			<div class="route">
 				<a href="#">
 					<img class="hitIcon" src="<%=request.getContextPath() %>/img/img_main/hit_icon.gif"/>

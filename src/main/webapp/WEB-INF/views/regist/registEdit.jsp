@@ -42,12 +42,21 @@
 		});
 	});
 </script>
+<<<<<<< Updated upstream
 <div class="container">
 	<div id="box">
 		<div>
 		<h3>비밀번호 재확인</h3>
 		<p>${logName } 님의 회원정보를 안전하게 보호하기 위하여<br/>
 		비밀번호를 한번 더 입력해주세요.</p>
+=======
+<div class="registerMainDiv">
+	<div class="contentBox2">
+		<div style='height:215px'>
+			<img id="LockImg" src="<%=request.getContextPath()%>/img/img_register/lock.png"/>
+			<p id="contentTxt1">비밀번호 재확인</p>
+			<p id="contentTxt2"><b class="mintTxt">${logName}홍길동</b>님의 회원정보를 안전하게 보호하기 위해<br/>비밀번호를 한번 더 입력해주세요.</p>
+>>>>>>> Stashed changes
 		</div>
 		<form id="pwdChk">
 			<input type="hidden" name="userid" value="${logId }"/>
