@@ -1,0 +1,167 @@
+	/*===================================registDel===================================*/
+	.registerMainDiv *{
+		width:800px;
+		margin : 0 auto;
+		text-align : center;
+	}
+
+	.contentText{
+		letter-spacing:-2px;
+		line-height:23px;
+		margin-bottom:40px;
+		padding-left:60px;
+		font-size:14px;
+		color:#353535;
+		text-align:left;
+	
+	}
+
+	#chkImg{
+		width:70px;
+		height:40px;
+	}
+	.contentBox{
+		width:800px;
+		margin:0 auto;
+		background-color : #eee;
+		border-top : 3px solid #ccc;
+		border-bottom : 3px solid #ccc;
+	}
+	.contentBox div:first-child{
+		border-bottom : 2px solid #ddd;
+		height : 135px;
+	}
+	.contentBox p{
+		height : 50px;
+		line-height : 50px;
+	}
+	#contentLbl1{
+		font-size:1.7em;
+		letter-spacing:-1px;
+		margin-bottom:50px;
+	}
+	#contentLbl2{
+		font-size:14px;
+		margin-bottom:10px;
+	}
+	#contentLbl3 {
+		font-weight:bold;
+		letter-spacing:0px;
+	}
+	.orangeTxt{
+		color:#FA3600;
+	}	
+	hr{
+		border:0;
+		width:800px;
+		background-color:#ccc;
+		height:3px;
+	}
+	#btnBox{
+		margin :0 auto;
+		height:100px;
+	}
+	.red_Btn{
+		border : #D20000 2px solid;
+		background-color : #D20000;
+		text-decoration: none;
+		text-align : center;
+		font-size : 16px;
+		padding : 6px 12px;
+		margin: 10px 10px;
+		color: white;
+		
+			}
+	.red_Btn:hover{
+		color : #D20000;
+		font-weight:bold;
+		background-color: white;
+	}
+	
+	/*==================================registDelChk==================================*/
+	.contentBox2{
+		height : 350px;
+		background-color : #eee;
+		border-top : 3px solid #ccc;
+		border-bottom : 3px solid #ccc;
+		width:800px;
+		margin:0 auto;
+		padding-top:40px;
+		margin-top:50px;
+		margin-bottom:100px;
+	}
+	.contentBox2 div:first-child{
+		border-bottom : 2px solid #ddd;
+		height : 120px;
+	}
+	#LockImg{
+		width:57px;
+		height:55px;
+	}
+	#contentTxt1{
+		font-weight:bold;
+		font-size:1.7em;
+		letter-spacing:1px;
+	}
+	#contentTxt2{
+		padding-top:20px;
+		letter-spacing:-1px;
+		line-height:25px;
+	}
+	#pwdChk{
+		padding-right:15px;
+	}
+	.mintTxt{
+		color:#00B0B0;
+	}
+	.grayTxt{
+		color:#353535;
+	}
+	.gray_Btn{
+		border : #353535 2px solid;
+		background-color : #353535;
+		text-decoration: none;
+		text-align : center;
+		font-size : 16px;
+		padding : 6px 12px;
+		margin : 0 10px;
+		color: white;
+	}
+	.gray_Btn:hover{
+		color : #353535;
+		font-weight:bold;
+		background-color: white;
+	}	
+	
+	
+	
+	/*================================registDelMessage================================*/
+
+	#contentLbl4{
+		font-size:1.8em;
+		font-weight:bold;
+		height : 50px;
+	}
+	.contentBox_white b{
+		height : 180px;
+		line-height : 30px;
+	}	
+	.contentBox_white{
+		width:800px;
+		margin: 0 auto;
+		height :400px;
+		background-color : white;
+		border-top : 3px solid #ccc;
+		margin-top:50px;
+		padding-top:35px;
+	}
+	#chk2Img{
+		width:80px;
+		height:80px;
+	}
+	.blueTxt{
+		color:#0070C0;
+	}
+	.lightgrayTxt{
+		color:#7F7F7F;
+	}

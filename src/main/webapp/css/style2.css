@@ -1,39 +1,112 @@
 @charset "UTF-8";
-body{margin:0; padding:0;}
+body{margin:0; padding:0;      
+	overflow-x:hidden;
+    overflow-y:auto;}
 	ul,li{margin:0px; padding:0px;list-style-type:none;} 
 	ul{list-style-type:none;}
 	/*=====================================header========================================================*/
+	/*로고*/
 	header{margin:0;padding:0; height:100px;}
 	
-	#logoDiv{text-align:right;width:55%;position:absolute;}
-	.lineDiv{background-color:rgb(64,64,64); height:2px;}
+
+	#logoDiv{text-align:right;width:57%;position:absolute;margin-top:25px;}
+	.lineDiv{background-color:rgb(64,64,64); height:2px;margin:0; padding:0;}
+	#logoDiv img{
+					width:220px; 
+					height:70px;
+				}
 	
-	
-	/*로그인,회원가입*/
-	#loginDiv{width:80%;}
-	#login{width:55%; height:50px;padding:20px 0 0 95%;}
-	#loginDiv li{line-height:55px; font-size:15px; float:left; width:15%;}
-	#login>li>img{width:25px;}
-	#login>li:last-child>input{
-								border:1px solid rgb(0,176,176);
+	/*=======================로그인 전,회원가입==============================================*/
+	#loginDiv{width:230px; height:100px; margin-left:1200px;}
+	#login>li:first-child{
+							font-size:15px;
+							padding-top:50px;
+	}
+	#login>li:nth-child(2n){
+							padding-top:45px;
+	}
+	#login>li:last-child{
+						padding-top:40px;
+	}
+	#loginIcon{
+				width:30px;
+	}
+
+	#login>li{
+				float:left;
+			
+	}
+
+	/*로그인 링크*/
+	#login a:link,#login a:visited{text-decoration:none; color:rgb(123,123,123);}	
+
+	/*회원가입 버튼*/			
+	#login>li:last-child>input{border:1px solid rgb(0,176,176);
 								border-radius:10px;
 								width:100px;
 								height:40px;
 								background-color:#fff;
 								color:rgb(0,176,176);
-								font-size:15px;}
-								
-	/*로그인 링크*/
-	#login a:link,#login a:visited{text-decoration:none; color:rgb(123,123,123);}	
-					
+								font-size:15px;}		
+	
+	/*===================================로그인 후,회원가입=====================================*/
+	#logoutDiv{width:230px; height:100px; margin-left:1200px;}
+	#logout>li:last-child{
+							padding:42px 0 0 20px;
+	}
+	#logout>li:first-child{
+						padding:40px 0 0 50px;
+	}
+	#alarmIcon{
+				width:30px;
+	}
+
+	#logout>li{
+				float:left;
+			
+	}
+	
+	/*logName 버튼*/			
+	#logout>li:first-child>input{border:1px solid rgb(0,176,176);
+								border-radius:10px;
+								width:100px;
+								height:40px;
+								background-color:#fff;
+								color:rgb(0,176,176);
+								font-size:15px;}	
+	
+	#logout>li>ul{
+					display:none; 
+					width:230px; 
+					position:absolute; 
+					border:3px solid rgb(221,221,221);
+					background-color:#fff; 
+					z-index:100; 
+					line-height:55px;
+					right:170px;
+	}
+	#logIdIcon{width:40px; position:absolute; padding:20px 0 0 20px;}
+	#logId{position:absolute; padding:8px 0 0 60px; color:rgb(64,64,64);}
+	#mypage{position:absolute; padding:35px 0 0 60px;}
+	#classDiv{padding-top:30px;}
+	.c1{padding-left:20px;}
+	#classDiv .c1:first-child{border-bottom:2px solid rgb(221,221,221);border-top:2px solid rgb(221,221,221);}
+	#classDiv .c1:nth-child(2n){border-bottom:2px solid rgb(221,221,221);}
+	
+	/*logId 링크*/
+	#mypage a:link,#mypage a:visited{text-decoration:none;color:rgb(0,176,176);}
+	#mypage a:hover{text-decoration:none; color:rgb(0,176,176);}
+	.c1 a:link, .c1 a:visited{text-decoration:none; color:rgb(64,64,64);}
+	.c1 a:hover{text-decoration:none; color:rgb(64,64,64);}
+	
 	
 	/*네비게이션*/
-	#naviDiv{width:800px; margin:0 auto;}
-	#navi{height:50px; padding-bottom:10px}
+	#naviDiv{margin-left:26%;}
+	#navi{height:50px; padding-bottom:10px;}
 	#navi li{text-align:center; line-height:55px; font-size:20px;}
-	#navi>li{float:left; width:20%; height:50px;}
-	#navi>li>ul{display:none; position:relative; border:3px solid rgb(221,221,221);background-color:#fff; z-index:100;}	
-
+	#navi>li{float:left; width:13%; height:50px;position:relative;}
+	#navi>li>ul{display:none; position:absolute; border:3px solid rgb(221,221,221); width:140px;background-color:#fff; z-index:100;}
+	
 	 
 	 /*홈,루트짜기,코스검색,동행찾기,후기-->파란밑줄 선*/
 	#navi li #homeLine{margin:0 auto; width:20px; height:2px; background-color:rgb(0,176,176);  display:none;}
@@ -60,7 +133,9 @@ body{margin:0; padding:0;}
 	#topDiv>ul{margin-left:100px;}
 	
 	#bottomDiv div:first-child{position:absolute; padding:40px 0 0 75px;width:60%; height:70px;}
-	#bottomDiv div:first-child>img{width:180px; height:75px;}
+	#bottomDiv div:first-child>img{
+									width:220px; 
+									height:70px;}
 	
 	#bottomDiv>#bottomLogoDiv{width:52%;height:80px;text-align:center;}
 	#bottomDiv #bottomLogoDiv>label{color:rgb(123,123,123);font-size:12px;line-height:120px;}
@@ -71,7 +146,8 @@ body{margin:0; padding:0;}
 	#topDiv a:link,#topDiv a:visited{text-decoration:none; color:rgb(123,123,123);}
 	
 	
-	.container{width:800px; margin : 0 auto;}
+	.container{margin : 0; padding:0}
+	#mainDiv{width:800px; margin : 0 auto;}
 	
 	/*=====================================main=====================================================*/
 
@@ -157,4 +233,12 @@ body{margin:0; padding:0;}
 		width:125px;
 		height:160px;
 	}
+	/*=========================소라 수정20/11/13===========================================*/	
 	
+	.bx-wrapper {
+	 -moz-box-shadow: none !important;
+ 	 -webkit-box-shadow: none !important;
+ 	 box-shadow: none !important;
+ 	 margin:0;
+ 	 padding:0;
+	}

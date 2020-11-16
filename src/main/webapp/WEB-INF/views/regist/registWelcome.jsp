@@ -1,19 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<style>
-	.container *{margin : 0 auto; text-align : center; }
-	.container>*{margin : 15px auto;}
-	#box{height : 400px; background-color : #eee;
-		 border-top : 3px solid #ccc; border-bottom : 3px solid #ccc;
-		 margin : 15px 0 ;}
-	#box div:first-child{border-bottom : 2px solid #ddd; height : 300px;}
-	#box p{height : 96px; line-height : 48px;}
-	.button{border : #00B0B0 2px solid; background-color : white ; border-radius: 8px;
-			text-decoration: none; text-align : center; font-size : 16px; padding : 12px 24px;
-			margin : 0 10px; color: #00B0B0}
-	.button:hover{color : white; background-color: #00B0B0}
-</style>
-<div class="container">
+<link rel="stylesheet" href="/home/css/register.css" type="text/css"/>
+
+<div class="registerMainDiv">
 	<h1>환영합니다!</h1>
 	<div id="box">
 		<div>
