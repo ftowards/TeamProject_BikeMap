@@ -9,7 +9,7 @@
       <property name="host" value="smtp.gmail.com" />
       <property name="port" value="587" />
       <property name="username" value="project.bikemap@gmail.com" />
-      <property name="password" value="bikemap11235" />
+      <property name="password" value="bodxswwcykwhelao" />
 
       <!-- email 요청시는 SMTP -->
       <property name="javaMailProperties">

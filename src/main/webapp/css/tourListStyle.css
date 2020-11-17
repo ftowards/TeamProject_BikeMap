@@ -2,20 +2,226 @@
 	#mainDiv{
 				width:800px; 
 				margin:0 auto;
+				height:1000px;
 	}
 	#dateDiv{
-				width:200px; 
-				height:100px;
+			 
+				height:60px;
+				margin-left:80px;
+				
 				}
-	.labelClass{
-					padding-top:6px;
+		
+	.labelClass,#distanceLbl {	
+					position:relative;
+					padding-top:9px;
 					text-align:center;
 					border:1px solid rgb(0,176,176);
 					border-radius:10px;
 					width:70px;
-					height:30px;
+					height:28px;
 					background-color:rgb(0,176,176);
-					color:rgb(0,176,176);
-					font-size:18px;
+					font-size:15px;
+					font-weight:bold;
 					color:#fff;
-					}
+					float:left;
+			}
+			
+	#startDate,#endDate,#startPlace,#distance{	
+				border:1px solid rgb(0,176,176);
+				text-align:center;
+				border-radius:10px;
+				width:130px;
+				height:35px;
+				background-color:#fff;
+				color:rgb(0,176,176);
+				font-size:15px;
+				font-weight:bold;
+				float:left;
+				
+	
+		
+	}
+	#label1{
+			margin-left:20px;
+			color:rgb(0,176,176);
+			font-weight:bold;
+			font-size:15px;
+	}
+	#startDate,#startPlace,#distance,#whole,#whole2{
+				margin-left:50px;
+	}
+	#endDate{
+				margin:-20px 0 0 50px;
+				
+				}
+
+	#placeAndDistanceDiv{
+					width:380px;
+					float:right;
+					
+	}
+	#placeDiv{
+				height:80px;
+				margin-left:80px;
+	
+	}
+	#genderDiv{
+			height:60px;
+			margin-left:80px;
+			
+	}
+	#whole,#whole2,#ten,#twenty,#thirty,#forty,#fiftyOver{
+			position:relative;
+			padding-top:9px;
+			text-align:center;
+			border:1px solid rgb(0,176,176);
+			border-radius:10px;
+			width:70px;
+			height:28px;
+			background-color:rgba(0,176,176,0.2);
+			color:rgb(0,176,176);
+			font-size:15px;
+			font-weight:bold;
+			float:left;
+	
+	}
+	
+	#genderBoy,#genderGirl{
+			position:relative;
+			padding-top:9px;
+			text-align:center;
+			border:1px solid rgb(0,176,176);
+			border-radius:10px;
+			width:40px;
+			height:28px;
+			background-color:rgba(0,176,176,0.2);
+			color:rgb(0,176,176);
+			font-size:15px;
+			font-weight:bold;
+			float:left;
+			margin-left:10px;
+	}
+
+	#ageDiv{
+			height:80px;
+			margin-left:80px;
+			
+	
+	}
+	#ten,#twenty,#thirty,#forty,#fiftyOver{
+														margin-left:10px;
+	}
+	input:focus{outline:none;}
+	input[type=radio]{
+						display:none;
+	}
+
+	#searchAndReset{
+					height:60px;
+					width:220px;
+					margin:0 auto;
+	}
+	#search{
+				position:relative;
+				padding-top:4px;
+				text-align:center;
+				border:1px solid black;
+				border-radius:10px;
+				width:70px;
+				height:40px;
+				background-color:black;
+				font-size:15px;
+				font-weight:bold;
+				color:#fff;
+				float:left;
+				margin-left:30px;
+	}
+	
+	#reset{
+				position:relative;
+				padding-top:4px;
+				text-align:center;
+				border:1px solid black;
+				border-radius:10px;
+				width:70px;
+				height:40px;
+				background-color:#fff;
+				font-size:15px;
+				font-weight:bold;
+				color:black;
+				float:left;
+				margin-left:50px;
+					
+	}
+	 #tourSearchTitleDiv{
+	 						height:25px;
+	 						
+	 						
+	 					}
+	 #tourSearchTitleLbl{
+	 
+	 				font-size:22px; 
+	 				color:rgb(64,64,64);
+	 }
+	 
+	#paging{
+				height:60px; 
+			
+				
+	} 
+	#paging ul{
+				width:178px;
+				margin-left:689px;		
+	}
+	#paging li{
+				float:left; 
+				width:25px; 
+				height:40px; 
+				font-size:15px;
+	} 	
+	#tourBoardListDivTop,#tourBoardListDivBottom{
+													width:820px;
+													height:220px;
+													
+	}	
+	#tourBoardListDivTop img,#tourBoardListDivBottom img,.blackWrapDiv{
+																		width:185px;
+																		height:200px;
+																		float:left;
+																		margin-right:20px;
+								
+	}
+	.blackWrapDiv{
+					width:185px;
+					height:200px;
+					position:absolute;
+					margin:0px;
+					background-color:black;
+					opacity:50%;
+					z-index:9;
+	}
+	.blackWrapDiv>p:first-child, .blackWrapDiv>p:nth-child(2),.blackWrapDiv>hr, 
+	.blackWrapDiv>p:last-child{
+								color:#fff;
+								text-align:center;
+	}
+	.blackWrapDiv>p:first-child{
+								margin-top:50px;
+								line-height:2px
+	}
+	.blackWrapDiv>p:last-child{
+						margin-top:20px;
+	}
+
+	#tourWriteDiv input{
+								border:1px solid black;
+								border-radius:10px;
+								width:60px;
+								height:30px;
+								background-color:#fff;
+								color:black;
+								font-size:12px;
+								margin:15px 0 0 740px;
+				
+	}
+	
