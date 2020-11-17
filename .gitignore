@@ -1,0 +1,6 @@
+/.metadata/
+.metadata/
+bin/
+target/
+Servers/
+.DS_Store
