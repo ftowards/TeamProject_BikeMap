@@ -6,8 +6,7 @@ target/
  
 # OS Files #
 .DS_Store
-  
-*.class
+ 
 
 ### Eclipse ###
 .metadata
@@ -76,4 +75,7 @@ local.properties
 .sts4-cache/
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse
+<<<<<<< HEAD
 
+=======
+>>>>>>> 26475c9950447f856e30a795e9458a0e414588af
