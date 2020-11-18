@@ -10,7 +10,7 @@ body{margin:0; padding:0;
 	
 
 	#logoDiv{text-align:right;width:57%;position:absolute;margin-top:25px;}
-	.lineDiv{background-color:rgb(64,64,64); height:2px;margin:0; padding:0;}
+	hr{color:rgb(64,64,64); height:1.7px; margin:0; padding:0; z-index:9}
 	#logoDiv img{
 					width:220px; 
 					height:70px;
@@ -67,7 +67,8 @@ body{margin:0; padding:0;
 	}
 	
 	/*logName 버튼*/			
-	#logout>li:first-child>input{border:1px solid rgb(0,176,176);
+	#logout>li:first-child>input{
+								border:1px solid rgb(0,176,176);
 								border-radius:10px;
 								width:100px;
 								height:40px;
@@ -83,7 +84,7 @@ body{margin:0; padding:0;
 					background-color:#fff; 
 					z-index:100; 
 					line-height:55px;
-					right:170px;
+					
 	}
 	#logIdIcon{width:40px; position:absolute; padding:20px 0 0 20px;}
 	#logId{position:absolute; padding:8px 0 0 60px; color:rgb(64,64,64);}
@@ -235,10 +236,19 @@ body{margin:0; padding:0;
 	}
 	/*=========================소라 수정20/11/13===========================================*/	
 	
+	div.bx-wrapper{
+		margin-top:-3.1px;
+		
+	}
+	#bxsliderTour img{
+		margin-top:-2px;
+	}
+	
+	
 	.bx-wrapper {
 	 -moz-box-shadow: none !important;
  	 -webkit-box-shadow: none !important;
  	 box-shadow: none !important;
- 	 margin:0;
  	 padding:0;
+
 	}

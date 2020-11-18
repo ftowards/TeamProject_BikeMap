@@ -58,8 +58,8 @@
 		<c:if test="${logStatus!='Y'}">	
 			<div id="loginDiv">
 				<ul id="login">
-					<li><a href="<%=request.getContextPath()%>/login">로그인&nbsp</a></li>
-					<li><img src="<%=request.getContextPath()%>/img/img_main/login_icon.png" id="loginIcon"/>&nbsp&nbsp&nbsp&nbsp</li>
+					<li><a href="<%=request.getContextPath()%>/login">로그인&nbsp;</a></li>
+					<li><img src="<%=request.getContextPath()%>/img/img_main/login_icon.png" id="loginIcon"/>&nbsp;&nbsp;&nbsp;&nbsp;</li>
 					<li><input type="button" value="회원가입" onclick="location.href='<%=request.getContextPath()%>/registerForm'"></li>
 				</ul>
 			</div>
@@ -67,9 +67,9 @@
 		<c:if test="${logStatus!=null && logStatus=='Y'}">	
 			<div id="logoutDiv">
 				<ul id="logout">
-					<li><input type="button" value="${logName}&nbsp님">
+					<li><input type="button" value="${logName}&nbsp;님">
 						<ul>
-								<img src="<%=request.getContextPath()%>/img/img_main/login_icon.png" id="logIdIcon">&nbsp
+								<img src="<%=request.getContextPath()%>/img/img_main/login_icon.png" id="logIdIcon">&nbsp;
 								<span id="logId"><b>${logId }</b></span>
 								<span id="mypage"><a href="#">마이페이지</a></span>
 							<div id=classDiv>
@@ -85,7 +85,7 @@
 		</c:if>
 	</div>	
 </header>
-	<div class="lineDiv"></div>
+	<hr>
 	<div id="naviDiv">
 	<ul id="navi">
 		<li><a href="<%=request.getContextPath()%>/">홈</a><div id="homeLine"></div></li>
@@ -93,7 +93,7 @@
 		<li><a href="#">코스검색</a><div id="courseLine"></div></li>
 		<li><a href="#">동행찾기</a><div id="searchLine"></div>
 			<ul>
-				<li><div class="popupMenuColor"><a href="#">만들기</a></div></li>
+				<li><div class="popupMenuColor"><a href="<%=request.getContextPath()%>/tourWriteForm">만들기</a></div></li>
 				<li><div class="popupMenuColor"><a href="<%=request.getContextPath()%>/tourList">검색</a></div></li>
 				<li><div class="popupMenuColor"><a href="#">참여모임</a></div></li>
 				<li><div class="popupMenuColor"><a href="#">내모임</a></div></li>
@@ -102,4 +102,4 @@
 		<li><a href="#">후기</a><div id="reviewLine"></div></li>
 		</ul>
 	</div>
-<div class="lineDiv"></div>
+<hr>
