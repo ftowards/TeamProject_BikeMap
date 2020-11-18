@@ -1,0 +1,75 @@
+@charset "UTF-8";
+	#mainDiv{
+		width:800px; 
+		margin:0 auto;
+
+	}
+	/*검색옵션바*/
+	#optionBar{
+		width:800px;
+		height:50px;
+		text-align:center;
+	}
+	select{
+		width:220px;
+		height:40px;
+		text-align:center;
+		font-size:1em;
+		font-weight:bold;
+		color:#7F7F7F;
+		border:0px;
+		border-radius:5px;
+		background-color:#eee;
+		background: url(../img/img_route/selectBox.png) no-repeat 95% 50%;
+		-webkit-appearance: none; /* 네이티브 외형 감추기 */
+    	-moz-appearance: none;
+    	appearance: none;
+    	margin-right:5px;
+	
+	}
+	#schBar{
+		width:130px;
+		height:38px;
+		border:0px;
+		border-radius:5px;
+		background-color:#F1F1F1;
+		
+	}
+	/*관리자 추천코스*/
+	#hitCourse{
+		height:250px;
+		background-color:orange;
+	}
+	
+	/*코스검색 컨텐츠 전체*/
+	#routeSearch{
+		width:800px;
+		margin:0px auto;
+		height:120px;
+		background-color:gray;
+	}
+	/*컨텐츠 제목*/
+	#title{
+		
+	
+	}
+	
+	/*컨텐츠*/
+	#content{
+		width:800px;
+		height:700px;
+		background-color:lightblue;
+	}
+	
+	.mint_Btn{
+		  font-size:15px;
+		  font-weight:bold;
+		  border-radius: 5px;
+		  text-decoration: none;
+		  text-align : center;
+		  padding:3px 6px;
+		  margin:0 10px;
+		  color : white;
+		  border: 1px solid #00B0B0;
+		  background-color: #00B0B0;
+	}

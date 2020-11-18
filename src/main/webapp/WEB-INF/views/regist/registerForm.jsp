@@ -1,27 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/home/css/registerForm.css" type="text/css"/>
  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<style>
-	.container{overflow:hidden;}
-	#label{width : 36%; margin-right : 4%}
-	#label li{text-align : right; font-size : 1.2em; font-weight: bold;}
-	#input{width : 60%;}
-	form>div{float:left;}
-	form li{height : 50px; line-height : 50px;}
-	
-	#input input[type=text],input[type=password], select{height : 24px; font-size:.9em}
-	#input li{height : 50px; font-size:1.1em;}
-	#buttons{width : 100%; height : 80px; overflow:auto; line-height : 50px; text-align : center; margin-top : 25px;}
-	.button{border : #00B0B0 2px solid; background-color : white ; border-radius: 8px;
-			text-decoration: none; text-align : center; font-size : 16px; padding : 12px 24px;
-			margin : 0 10px; color: #00B0B0}
-	.button:hover{color : white; background-color: #00B0B0}
-	
-	#idChk{font-size : 12px; padding : 6px 12px;}
-	.reg{color:#55CBF5; font-size : 12px; font-weight:bold;}
-</style>
 <script>
 	$(function(){
 		$("#datepicker").datepicker({
@@ -49,7 +31,6 @@
 				alert("아이디를 입력하세요.");
 				return false;
 			} 
-
 			if(!regId.test($("#userid").val())){
 				alert("아이디는 8~12자리\n영문자로 시작하여야 하고, 숫자와 특수문자 _ 만 사용 가능합니다.");
 				return false;
@@ -178,47 +159,48 @@
 	});
 	
 </script>
-<div class="container">
+<div class="registerMainDiv" style='margin-bottom:150px'>
 	<form id="registerForm" method="post" action="<%=request.getContextPath()%>/registerFormOk">
+	<h2 style='padding-left:50px'>회원가입</h2><hr/><br/><br/>
 		<div id = "label">
 			<ul>
-				<li>아이디</li>
-				<li>비밀번호</li>
-				<li>비밀번호 확인</li>
-				<li>이  름</li>
-				<li>이메일</li>
-				<li>성  별</li>
-				<li>생년월일</li>
+				<li>아이디<span class="redTxt"> *</span></li>
+				<li>비밀번호<span class="redTxt"> *</span></li>
+				<li>비밀번호 확인<span class="redTxt"> *</span></li>
+				<li>이  름<span class="redTxt"> *</span></li>
+				<li>이메일<span class="redTxt"> *</span></li>
+				<li>성  별<span class="redTxt"> *</span></li>
+				<li>생년월일<span class="redTxt"> *</span></li>
 			</ul>
 		</div>
 		<div id="input">
 			<ul>
-				<li><input type="text" name="userid" id="userid" maxlength="12" size="12"/><input type="button" class="button" id="idChk" value="중복검사"/>
+				<li><input type="text" name="userid" id="userid" class="i1" maxlength="12" size="12"/> <input type="button" class="gray_Btn" id="idChk" value="중복검사"/>
 					<span class="reg">8~12자 영문(시작)/숫자/_ 사용</span></li>
-				<li><input type="password" name="userpwd" id="userpwd" maxlength="12" size="20"/>
+				<li><input type="password" name="userpwd" id="userpwd" class="i2" maxlength="12" size="20"/>
 					<span class="reg">8~12자리 영문/숫자/특수문자 사용</span></li>
-				<li><input type="password" name="userpwdChk" id="userpwdChk" maxlength="12" size="20"/></li>
-				<li><input type="text" name="username" id="username" maxlength="5" size="20"/>
+				<li><input type="password" name="userpwdChk" id="userpwdChk" class="i2" maxlength="12" size="20"/></li>
+				<li><input type="text" name="username" id="username" class="i2" maxlength="5" size="20"/>
 					<span class="reg">한글로 최대 5자까지 입력</span></li>
-				<li><input type="text" name="email1" id="email1" size="6"/>@<input type="text" id="email2" name="email2" size="6"/>
-					<select id="domainSelect">
-						<option value="" selected>직접 입력</option>
+				<li><input type="text" name="email1" id="email1" class="i3" size="6"/><span class="tlbl"> @ </span><input type="text" id="email2" class="i3" name="email2" size="6"/>
+					<select id="domainSelect" style='font-size:0.8em'>
+						<option value="" selected>직접입력</option>
 						<option value="naver.com">naver.com</option>
 						<option value="google.com">google.com</option>
 						<option value="daum.net">daum.net</option>
 						<option value="hotmali.com">hotmail.com</option>
 					</select>
-					<input type="button" class="button" id="emailChk" value="중복검사"/>
+					<input type="button" class="gray_Btn" id="emailChk" value="중복검사"/>
 					</li>
-				<li><input type="radio" name="gender" id="gender" value="1"/>남 자
-					<input type="radio" name="gender" id="gender" value="2" checked/>여 자</li>
-				<li><input type="text" name="birth" id="datepicker" maxlength="10"/>
+				<li><input type="radio" name="gender" id="gender" value="1"/><span class="tlbl">남 자</span>
+					<input type="radio" name="gender" id="gender" value="2" checked/><span class="tlbl">여 자</span></li>
+				<li><input type="text" name="birth" id="datepicker" class="i2" maxlength="10"/>
 					<span class="reg">ex)1980-12-03</span></li>			
 			</ul>
 		</div>
 		<div id="buttons">
-			<input type="submit" class = "button" value="회원가입"/>
-			<input type="reset" class = "button" value="다시쓰기"/>
+			<input type="submit" class="mint_Btn" value="회원가입"/>
+			<input type="reset" class="WMint_Btn" value="다시쓰기"/>
 		</div>
 	</form>
 </div>
