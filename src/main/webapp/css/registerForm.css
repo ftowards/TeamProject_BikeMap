@@ -12,8 +12,8 @@
 		height:2px;
 	}
 	#label{
-		width : 30%;
-		margin-right : 4%;
+		width : 35%;
+		margin-right:20px;
 	}
 	#label li{
 		top-margin:15px;
@@ -34,7 +34,7 @@
 		height : 45px;
 		line-height : 50px;
 	}
-	
+
 	#input input[type=text],input[type=password], select{
 		height : 25px;
 		font-size:.9em
@@ -108,7 +108,7 @@
 		color : white;
 		background-color: #00B0B0;
 	}
-	
+
 	#idChk{
 		font-size : 12px;
 		padding : 6px 12px;
@@ -118,16 +118,16 @@
 		font-size : 12px;
 		font-weight:bold;
 	}
-	
-	
-	
-	
+
+
+
+
 	/*===============================registerForm===============================*/
-	
-	
-	
-	
-	
+
+
+
+
+
 	/*==============================registFindInfo==============================*/
 	form{
 		margin : 20px 0;
@@ -146,14 +146,20 @@
 	#cntbox{
 		margin-bottom:200px;
 	}
+	.find{
+		padding-left:52px;
+		margin-top:60px;
+		width:50%;
+		text-align:center;
+	}
 	#findId, #findPwd{
 		font-size:1.2em;
 	}
 	#findIdForm>input, #findPwdForm>input{
-		width : 60%;
+		width : 50%;
 		height : 40px;
 		line-height : 40px;
-		margin : 3px 0;
+		margin : 0 0 10px 0;
 	}
 	#t1{
 		font-size:0.9em;
@@ -176,7 +182,43 @@
 		color : #00B0B0;
 		background-color: white
 	}	
-	
-	
-	
+
+
+
 	/*==============================registWelcome==============================*/
+	.registerMainDiv2 *{
+		margin : 0 auto;
+		width:800px;
+		text-align : center;
+	}
+	#box{
+		height : 400px;
+		background-color : #eee;
+		border-top : 3px solid #ccc;
+		border-bottom : 3px solid #ccc;
+		margin:0 auto;
+		width:800px;
+	}
+	#box div:first-child{
+		border-bottom : 2px solid #ddd;
+		height : 300px;
+	}
+	#box p{
+		height : 96px;
+		line-height : 48px;
+	}
+	.button{
+		border : #00B0B0 2px solid;
+		background-color : white ;
+		border-radius: 8px;
+		text-decoration: none;
+		text-align : center;
+		font-size : 16px;
+		padding : 12px 24px;
+		margin : 0 10px;
+		color: #00B0B0;
+	}
+	.button:hover{
+		color : white;
+		background-color: #00B0B0;
+	}
