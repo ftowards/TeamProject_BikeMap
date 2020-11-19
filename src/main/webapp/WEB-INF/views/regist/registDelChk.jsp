@@ -35,7 +35,7 @@
 		<div style='height:215px'>
 			<img id="LockImg" src="<%=request.getContextPath()%>/img/img_register/lock.png"/>
 			<p id="contentTxt1">비밀번호 재확인</p>
-			<p id="contentTxt2"><b class="mintTxt">${logName}홍길동</b>님의 회원정보를 안전하게 보호하기 위해<br/>비밀번호를 한번 더 입력해주세요.</p>
+			<p id="contentTxt2"><b class="mintTxt">${logName}</b>님의 회원정보를 안전하게 보호하기 위해<br/>비밀번호를 한번 더 입력해주세요.</p>
 		</div>
 		<form id="pwdChk">
 			<input type="hidden" name="userid" value="${logId}"/>
