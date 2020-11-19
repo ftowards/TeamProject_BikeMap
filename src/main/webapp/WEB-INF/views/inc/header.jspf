@@ -89,8 +89,13 @@
 	<div id="naviDiv">
 	<ul id="navi">
 		<li><a href="<%=request.getContextPath()%>/">홈</a><div id="homeLine"></div></li>
+<<<<<<< HEAD
 		<li><a href="#">루트짜기</a><div id="routeLine"></div></li>
 		<li><a href="<%=request.getContextPath()%>/routeSearch">코스검색</a><div id="courseLine"></div></li>
+=======
+		<li><a href="<%=request.getContextPath()%>/courseMap">루트짜기</a><div id="routeLine"></div></li>
+		<li><a href="#">코스검색</a><div id="courseLine"></div></li>
+>>>>>>> 40e0d54d11a15ac61d2c81114ac40cd563e4cbbc
 		<li><a href="#">동행찾기</a><div id="searchLine"></div>
 			<ul>
 				<li><div class="popupMenuColor"><a href="#">만들기</a></div></li>
