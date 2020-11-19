@@ -66,5 +66,4 @@
 			<include-prelude>/WEB-INF/views/inc/headerTourList.jspf</include-prelude>
 		</jsp-property-group>
 	</jsp-config>
-
 </web-app>

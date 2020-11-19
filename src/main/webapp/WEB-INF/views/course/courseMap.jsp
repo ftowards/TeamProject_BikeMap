@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <style>
 	#container{width : 1200px;height : 70vh; margin:0 auto;}
 	#container>div{float:left;}
@@ -132,7 +133,7 @@
 								<button value="SW8" class="button" onclick="searchPlaceCategory(value);">지하철</button>
 								<button value="BK9" class="button" onclick="searchPlaceCategory(value);">은행</button>
 							</li>
-						<hr/>
+						<hr>
 					</ul>
 				</div>
 		        
@@ -144,36 +145,32 @@
 			</div>
 			<div class="tab" id="pannel3">
 				<div onclick="showFoodList();">찜한 음식점</div>
-				<ul id="foodList" style="display:none;">
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-				</ul>				
+				<ul id="foodList" style="display:none;"></ul>				
 				<div onclick="showSightsList();">찜한 관광지</div>
-				<ul id="sightsList" style="display:none;">
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-				</ul>
+				<ul id="sightsList" style="display:none;"></ul>
 				<div onclick="showAccomList();">찜한 숙박시설</div>
-				<ul id="accomodationList" style="display:none;">
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-				</ul>
+				<ul id="accomodationList" style="display:none;"></ul>
 				<div onclick="showConveList();">찜한 편의시설</div>
-				<ul id="convenientList" style="display:none;">
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-					<li>dsafadas</li>
-				</ul>
+				<ul id="convenientList" style="display:none;"></ul>
 			</div>
 			<div class="tab">
-				저장하기
+				<form>
+					<input type="text" name="title" id="title" placeholder="코스 이름을 입력하세요"/>
+					<c:if test="${logId!=null }">
+						<select name="catename" id="catename">
+							<c:forEach var="list" items="${category }">
+								<option value="${list.nocoursecate }" title="${list.catename }">${list.catename}</option>
+							</c:forEach>
+							<c:if test="${fn:length(category) < 5}">
+								<option value="addCategory">카테고리 추가</option>
+							</c:if>
+						</select>
+					</c:if>
+					<c:if test="${logId == null }">
+						<h5>로그인 후 이용 가능합니다.</h5>
+					</c:if>
+					
+				</form>
 			</div>
 		</div>
 	</div>
@@ -185,7 +182,7 @@
 	var markers = [];
 	var container = document.getElementById("map");
 	var options = {
-			center : new kakao.maps.LatLng(33.450701, 126.570667),
+			center : new kakao.maps.LatLng(37.5510907243016, 126.937364458741),
 			level : 3,
 			draggable : 'true',
 			
@@ -358,30 +355,37 @@
 		paginationEl.appendChild(fragment);
 	}
 	
+	
+	// 인포 윈도우 작업
+	// 중요!!!@!#@!#@!#@!#@!#@!
 	function displayInfowindow(marker, places){
 		
-		console.log(places);
+		// 플레이스 객체 스트링으로 전환
+		var place = JSON.stringify(places);
+		
 		var group = places.category_group_code;
 		var content = '<div style="padding:5px; font-size:12px;">';
+		
+		// 인포 윈도우 이름에 링크 설정
 		if(places.place_url){
 			content += '<a href= "'+places.place_url+'" target="_blank">' + places.place_name + '</a><hr/><ul>';	
 		}else{
 			content += places.place_name + '<hr/><ul>';
 		}
 		
-		content += "<li value='"+"dfdafadf"+"' onclick='setStart(value);'>출발지 지정</li>";
+		content += "<li onclick='setStart(title)' title='"+place+"'>출발지 지정</li>";
 		content += "<li onclick='console.log(11)'>경유지 지정</li>";
 		content += "<li onclick='console.log(222)'>도착지 지정</li><hr/>";
 		
 		// 카테고리 추가 버튼 생성
 		if(group == 'FD6' || group =='CE7'){
-			content += '<li>음식점 저장</li>';
+			content += "<button onclick='setPlaceList(value, title)' title='foodList' value='"+place+"'>음식점 저장</button>";
 		}else if(group == 'CT1' || group =='AT4'){
-			content += '<li>관광지 저장</li>';
+			content += "<button onclick='setPlaceList(value, title)' title='sightsList' value='"+place+"'>관광지 저장</button>";
 		}else if(group == 'AD5'){
-			content += '<li>숙박시설 저장</li>'
+			content += "<button onclick='setPlaceList(value, title)' title='accomodationList' value='"+place+"'>숙박시설 저장</button>";
 		}else if(group == 'CS2' || group == 'PK6' ||group == 'SW8' ||group == 'BK9' ||group == 'HP8' ||group == 'PM9'){
-			content += '<li>편의시설 저장</li>'
+			content += "<button onclick='setPlaceList(value, title)' title='convenientList' value='"+place+"'>편의시설 저장</button>";
 		}
 		content += '</ul></div>';
 		
@@ -431,8 +435,7 @@
 			bounds : bounds,
 			size : 10
 		});
-	}
-	
+	}	
 	
 	// 찜한 리스트 오픈 / 음식점
 	var foodListOpen = 1;
@@ -484,7 +487,121 @@
 	
 	// 출발지 지정
 	function setStart(value){
+		var json = JSON.parse(value);
+		
+		
 		console.log(value);
+		console.log(json.address_name);
 	}
 	
+	
+	
+	// 장소 리스트 설정
+	function setPlaceList(value, type){
+		// value = 장소 정보(string 타입으로 변환한 것)
+		// type = 장소 리스트 종류 (음식 / 관광지 / 숙박시설 / 편의시설)
+		
+		var json = JSON.parse(value);
+		var cnt = $("#"+type).children("li").length;
+		var newList ="";
+		var overlap = 0;
+		
+		// 현재 등록된 리스트 숫자 확인 : 5개 이상이면 오류 메세지 출력 후 더 이상 추가가 안 됨.
+		if(cnt < 5){
+			
+			// 이미 등록된 장소 일 경우 추가로 등록이 되지 않음
+			$("#"+type).children("li").each(function(){
+				var id = $(this).attr("title");
+				if(id == json.id){
+					alert("이미 등록된 장소입니다.");
+					overlap++;
+					return false;
+				}
+			});
+			
+			// 리스트에 여유가 있고, 먼저 등록이 되지 않았을 경우 새로운 리스트 작성
+			if(overlap == 0){
+				newList += "<li title='"+json.id+"'><a href='"+json.place_url+"' target='_blank'><input type='text' value='"+json.place_name+"'/></a>";
+				newList += "<input type='hidden' value='"+value+"'/><button onclick='$(this).parent().remove();'>-</button></li>";
+			}else{
+				return false;
+			}
+		} else{
+			alert("장소는 코스당 종류 별로 최대 5개 등록이 가능합니다.");
+			return false;
+		}
+		$("#"+type).append(newList);
+	}
+	
+	
+	// 저장하기 
+	
+	// 카테고리 추가
+	$("#catename").on('change',function(){
+		if($(this).val() == 'addCategory'){
+			var catename = prompt("새 카테고리 이름을 입력하세요.", "새 코스");
+			var overlap = 0;
+			
+			// 카테고리 추가 시 중복 확인
+			$("#catename").children("option").each(function(){
+				var names = $(this).attr("title");
+				console.log(names);
+				if(names == catename){
+					alert("이미 등록된 이름입니다.");
+					overlap++;
+					return false;
+				}
+			});
+			
+			// 중복이 없다면 비동기식으로 새로운 카테고리 추가
+			if(overlap ==0){
+				var url = "<%=request.getContextPath()%>/insertCategory";
+				var data = "catename="+catename;
+
+				$.ajax({
+					url : url,
+					data : data,
+					success : function(result){
+						if(result == 1){
+							alert("새로운 카테고리가 추가되었습니다.");
+							selectCategory();
+						}else{
+							alert("카테고리 추가 에러");
+						}
+					}, error : function(){
+						console.log("카테고리 새로 추가 에러");
+					}
+				});
+			}			
+		}else{
+			return false;
+		}
+	});
+	
+	// 카테고리 새로 설정하기
+	function selectCategory(){
+		var url = "<%=request.getContextPath()%>/selectCategory";
+		var tag = "";
+		
+		$.ajax({
+			url : url,
+			success : function(result){
+				var cnt = 0;
+				// 카테고리 리스트 추가
+				$.each(result, function(index, value){
+					tag += "<option value='"+value.nocoursecate+"' title='"+ value.catename+"'>"+value.catename+"</option>";
+					cnt++;
+				});
+				
+				// 카테고리 5개 미만일 시 추가하는 옵션 추가
+				if(cnt<5){
+					tag+= "<option value='addCategory'>카테고리 추가</option>";
+				}
+				
+				$("#catename").html(tag);
+			},error : function(){
+				alert("카테고리 호출 에러");
+			}
+		});
+	}
 </script>
