@@ -161,7 +161,7 @@
 </script>
 <div class="registerMainDiv" style='margin-bottom:150px'>
 	<form id="registerForm" method="post" action="<%=request.getContextPath()%>/registerFormOk">
-	<h2 style='padding-left:50px'>회원가입</h2><hr/><br/><br/>
+	<h2 style='padding-left:320px'>회원가입</h2><hr/><br/><br/>
 		<div id = "label">
 			<ul>
 				<li>아이디<span class="redTxt"> *</span></li>

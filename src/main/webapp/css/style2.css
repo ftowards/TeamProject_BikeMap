@@ -9,24 +9,60 @@ body{margin:0; padding:0;
 	header{margin:0;padding:0; height:100px;}
 	
 
-	#logoDiv{text-align:right;width:57%;position:absolute;margin-top:25px;}
-	.lineDiv{background-color:rgb(64,64,64); height:2px;margin:0; padding:0;}
+	#logoDiv{text-align:right;width:57%;margin-top:25px;float:left;}
+	.lineDiv{background-color:rgb(64,64,64); height:1px; margin:0; padding:0; z-index:9}
 	#logoDiv img{
 					width:220px; 
 					height:70px;
 				}
 	
 	/*=======================로그인 전,회원가입==============================================*/
-	#loginDiv{width:230px; height:100px; margin-left:1200px;}
-	#login>li:first-child{
-							font-size:15px;
-							padding-top:50px;
+	#loginDiv{	
+				float:left;	
+				width:43%; 
+				height:100px; 
+					
+				
 	}
-	#login>li:nth-child(2n){
-							padding-top:45px;
+	#loginLblDiv{
+					width:63px;
+					heigth:200px;
+					float:left;
+					margin:40px 0 0 350px;
+				
+				
 	}
-	#login>li:last-child{
-						padding-top:40px;
+	#loginImgDiv{
+					width:50px;
+					heigth:100px;
+					float:left;
+					margin:38px 0 0 410px;
+					position:absolute;
+	
+	}
+	#loginRegisterDiv{
+					width:50px;
+					heigth:100px;
+					float:left;
+					margin:34px 0 0 470px;
+					position:absolute;
+					
+	}
+	#loginLblDiv>li:first-child{
+							float:left;
+							font-size:18px;
+								
+							
+	}
+	#loginImgDiv>li:nth-child(2n){
+									float:left;
+										
+							
+	}
+	#loginRegisterDiv>li:last-child{
+						float:left;
+							
+						
 	}
 	#loginIcon{
 				width:30px;
@@ -38,10 +74,11 @@ body{margin:0; padding:0;
 	}
 
 	/*로그인 링크*/
-	#login a:link,#login a:visited{text-decoration:none; color:rgb(123,123,123);}	
+	#loginLblDiv a:link,#loginLblDiv a:visited{text-decoration:none; color:rgb(123,123,123);}	
 
 	/*회원가입 버튼*/			
-	#login>li:last-child>input{border:1px solid rgb(0,176,176);
+	#loginRegisterDiv>li:last-child>input{
+								border:1px solid rgb(0,176,176);
 								border-radius:10px;
 								width:100px;
 								height:40px;
@@ -50,12 +87,28 @@ body{margin:0; padding:0;
 								font-size:15px;}		
 	
 	/*===================================로그인 후,회원가입=====================================*/
-	#logoutDiv{width:230px; height:100px; margin-left:1200px;}
-	#logout>li:last-child{
-							padding:42px 0 0 20px;
+	#logoutDiv{
+				float:left;
+				width:43%; 
+				height:100px; 
+				
+	}
+	
+	#loginImgAlarmDiv{	
+						width:50px;
+						heigth:100px;
+						float:left;
+						margin:42px 0 0 530px;
+						position:absolute;
+	
+	
+	}
+	#loginImgAlarmDiv>li:last-child{
+							float:left;
 	}
 	#logout>li:first-child{
-						padding:40px 0 0 50px;
+							font-size:15px;
+							margin:40px 0 0 400px;
 	}
 	#alarmIcon{
 				width:30px;
@@ -67,7 +120,8 @@ body{margin:0; padding:0;
 	}
 	
 	/*logName 버튼*/			
-	#logout>li:first-child>input{border:1px solid rgb(0,176,176);
+	#logout>li:first-child>input{
+								border:1px solid rgb(0,176,176);
 								border-radius:10px;
 								width:100px;
 								height:40px;
@@ -83,7 +137,9 @@ body{margin:0; padding:0;
 					background-color:#fff; 
 					z-index:100; 
 					line-height:55px;
-					right:170px;
+					margin-left:-140px;
+					
+					
 	}
 	#logIdIcon{width:40px; position:absolute; padding:20px 0 0 20px;}
 	#logId{position:absolute; padding:8px 0 0 60px; color:rgb(64,64,64);}
@@ -105,7 +161,7 @@ body{margin:0; padding:0;
 	#navi{height:50px; padding-bottom:10px;}
 	#navi li{text-align:center; line-height:55px; font-size:20px;}
 	#navi>li{float:left; width:13%; height:50px;position:relative;}
-	#navi>li>ul{display:none; position:absolute; border:3px solid rgb(221,221,221); width:140px;background-color:#fff; z-index:100;}
+	#navi>li>ul{display:none; position:absolute; border:3px solid rgb(221,221,221); width:100%; background-color:#fff; z-index:100;}
 	
 	 
 	 /*홈,루트짜기,코스검색,동행찾기,후기-->파란밑줄 선*/
@@ -235,10 +291,19 @@ body{margin:0; padding:0;
 	}
 	/*=========================소라 수정20/11/13===========================================*/	
 	
+	div.bx-wrapper{
+		margin-top:-3.1px;
+		
+	}
+	#bxsliderTour img{
+		margin-top:-2px;
+	}
+	
+	
 	.bx-wrapper {
 	 -moz-box-shadow: none !important;
  	 -webkit-box-shadow: none !important;
  	 box-shadow: none !important;
- 	 margin:0;
  	 padding:0;
+
 	}

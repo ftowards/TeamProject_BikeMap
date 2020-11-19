@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 <link rel="stylesheet" href="/home/css/tourListStyle.css" type="text/css"/>
+ <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
 	$(function(){
 		var whole = $("#whole");
@@ -40,20 +42,32 @@
 		$("#fiftyOverRadio").click(function(){
 			fiftyOver.css('color','white').css('background-color','rgb(0,176,176)');
 		});
+		$("#startDate,#endDate").datepicker({
+			changeYear :true,
+			changeMonth: true,
+			constrainInput:true,
+			dateFormat:"yy/mm/dd",
+			dayNames:['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+			dayNamesMin:['일','월','화','수','목','금','토'],
+			monthNamesShort:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			yearRange:"2019:2020"
+		});
 	});
 </script>
 <div id="mainDiv">
 	
 	<div id="dateDiv">
 		<div class="labelClass"><label>일&nbsp;정</label></div>
-		<div><input type="text" name="startDate" placeholder="출발날짜" id="startDate" maxlength="10"></div>
+		<div><input type="text" name="startDate" placeholder="출발날짜" id="startDate" maxlength="10" autocomplete="off"></div>
 		<div><label  id="label1">~</label></div>
-		<div><input type="text" name="endDate"	placeholder="도착날짜" id="endDate" maxlength="10"></div>
+		<div><input type="text" name="endDate"	placeholder="도착날짜" id="endDate" maxlength="10" autocomplete="off"></div>
 	</div>
 	
 	<div id="placeDiv">
 		<div><label class="labelClass">장&nbsp;소</label></div>
 		<div><input type="text" name="startPlace" placeholder="출발장소" id="startPlace"></div>
+		
 		<div id="placeAndDistanceDiv">
 			<div><label id="distanceLbl">이동거리</label></div>
 			<div><input type="text" name="startPlace" placeholder="ex)10km" id="distance"></div>

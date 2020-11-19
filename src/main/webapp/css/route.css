@@ -1,13 +1,18 @@
 @charset "UTF-8";
+	body{
+		margin:0;
+		padding:0;
+    }
 	#mainDiv{
-		width:800px; 
+		width:800px;
+		height:1400px;
 		margin:0 auto;
-
 	}
 	/*검색옵션바*/
 	#optionBar{
 		width:800px;
 		height:50px;
+		margin-bottom:60px;
 		text-align:center;
 	}
 	select{
@@ -25,40 +30,108 @@
     	-moz-appearance: none;
     	appearance: none;
     	margin-right:5px;
-	
+	}
+	#km{
+		color:#7F7F7F;
+		font-size:1em;
+		font-weight:bolder;
+  		position: relative;
+  		left:600px;
+  		bottom:30px;
+  		z-index: 2;
+  		width:50px;
 	}
 	#schBar{
 		width:130px;
 		height:38px;
 		border:0px;
 		border-radius:5px;
+		padding-left:10px;
+		z-index: 1;
 		background-color:#F1F1F1;
 		
 	}
 	/*관리자 추천코스*/
 	#hitCourse{
-		height:250px;
-		background-color:orange;
+		height:220px;
+	}
+
+	#hitDiv > b, #title, #mapDiv b{
+		color:#353535;
+		font-size:1.3em;
+		font-weight:600;
+	}
+	#hitCourse{
+		float:left;
+		height:200px;
+		margin: 15px 0 50px 0;
+	}
+	.thumbnail{
+		width:19.4%;
+		height:150px;
+		margin-top:1px;
+		border-radius:5px;
+	}
+	.hitIcon{
+		width:70px;
+		height:30px;
+		margin-left:85px;
+		position:absolute;
+		border-radius:5px;
 	}
 	
 	/*코스검색 컨텐츠 전체*/
 	#routeSearch{
 		width:800px;
-		margin:0px auto;
-		height:120px;
-		background-color:gray;
+		height:130px;
+		margin-left:5px;
+		padding-top:200px;
+		text-align:left;
+		background-color:white;
 	}
-	/*컨텐츠 제목*/
 	#title{
-		
-	
+		margin:10px 10px 20px 0;
+	}
+	#subTxt{
+		color:#353535;
+		font-size:1em;
+		font-weight:600;
+	}
+	#lBar{
+		color:#7F7F7F;
+		font-weight:400;
+	}
+	#paging{
+		color:#353535;
+		font-size:1em;
+		font-weight:400;
+		float:right;
+		padding-right:15px;	
 	}
 	
 	/*컨텐츠*/
 	#content{
 		width:800px;
 		height:700px;
-		background-color:lightblue;
+	}
+	.thumbnail2{
+		width:250px;
+		height:250px;
+		border-radius:5px;
+	}
+	#contentDiv{
+		float:left;
+		margin-right:5px;
+	}
+	.contentDiv{
+		float:left;
+		width:33.3%;
+		text-align:center;
+	}
+	.star{
+		width:150px;
+		height:30px;
+		margin-bottom:50px;
 	}
 	
 	.mint_Btn{
@@ -72,4 +145,80 @@
 		  color : white;
 		  border: 1px solid #00B0B0;
 		  background-color: #00B0B0;
+	}
+	
+	
+	
+	/*==========================routeSearchView.jsp==============================*/
+	#mapDiv{
+		width:100%;
+		height:200px;
+		background-color:gray;
+	}
+	#mapDiv b{
+		margin-bottom:200px;
+	}
+	/*지도&고도정보*/
+	#map_Altitude{
+		width:65%;
+		height:349px;
+		float:left;
+		background-color:pink;
+	}
+	
+	/*코스이름&별점*/
+	#routeInfo{
+		width:35%;
+		float:left;
+		height:350px;
+		background-color:orange;
+	}
+	
+	#placeList{
+		height:480px;
+		background-color:lightblue;
+	}
+	#placeList >*{
+		float:left;
+		width:23.33%;
+		margin-right:20px;
+		height:200px;
+	}
+	/*음식점*/
+	#restaurant{
+		height:200px;
+		background-color:yellow;	
+	}
+	/*관광지*/
+	#tour{
+		height:200px;
+		background-color:orange;	
+	}
+	/*숙박시설*/
+	#accommodation{
+		height:200px;
+		background-color:yellow;	
+	}
+	/*편의시설*/
+	#facilities{
+		height:200px;
+		margin:0px;
+		background-color:gray;	
+	}
+	
+	#commentDiv{
+		height:200px;
+	}
+	#cmtTitle{
+		padding:15px 0;
+	}
+	#commentBox{
+		height:150px;
+		background-color:green;
+	}
+	
+	/*댓글*/
+	#comment{
+		height:450px;
+		background-color:orange;
 	}

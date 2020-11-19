@@ -184,15 +184,16 @@
 													height:220px;
 													
 	}	
-	#tourBoardListDivTop img,#tourBoardListDivBottom img,.blackWrapDiv{
-																		width:185px;
-																		height:200px;
-																		float:left;
-																		margin-right:20px;
+	#tourBoardListDivTop img,
+	#tourBoardListDivBottom img,.blackWrapDiv{
+												width:190px;
+												height:200px;
+												float:left;
+												margin-right:15px;
 								
 	}
 	.blackWrapDiv{
-					width:185px;
+					width:190px;
 					height:200px;
 					position:absolute;
 					margin:0px;
@@ -211,6 +212,7 @@
 	}
 	.blackWrapDiv>p:last-child{
 						margin-top:20px;
+						opacity:100%;
 	}
 
 	#tourWriteDiv input{
