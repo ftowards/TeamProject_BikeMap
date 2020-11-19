@@ -1,0 +1,233 @@
+@charset "UTF-8";
+	#mainDiv{
+				width:800px;
+				margin:0 auto;
+				height:1500px;			
+	}
+	#tourWriteFormTitleDiv{
+							height:80px;
+							margin-top:50px;	
+	}
+	hr{
+		margin-top:15px;
+	}
+	#tourWriteFormTitleLbl{
+							font-size:22px; 
+	 						color:rgb(64,64,64);
+	 					
+	}
+	#CourseSearchDiv{
+						height:50px;
+						
+	}
+	input:focus{outline:none;}
+	
+	#CourseSearchDiv input{
+							float:left;	
+	}
+	#CourseSearchDiv input[type=text]{
+										width:300px;
+										padding:4px 0 0 10px;
+										border:1px solid rgb(221,221,221);
+										border-radius:8px;
+										height:25px;
+										background-color:rgb(221,221,221);
+										font-size:15px;
+										font-weight:bold;
+										color:rgb(64,64,64)									
+	}
+	#CourseSearchDiv input[type=button]{
+										width:70px;
+										padding-top:2px;
+										border:1px solid rgb(69,69,79);
+										border-radius:8px;
+										height:30px;
+										background-color:rgb(69,69,79);
+										text-align:center;
+										font-size:15px;
+										font-weight:bold;
+										color:#fff;		
+										margin-left:25px;					
+	}
+	#courseResultDiv{
+						width:500px;
+						height:400px;
+						background-color:lightblue;
+						float:left;	
+	
+	}
+	#conditionDiv{
+					width:300px;
+					height:400px;
+					float:left;	
+			
+	}
+	.labelClass,#departure,#arrive,.conditionBox{	
+					
+					padding-top:4px;
+					text-align:center;
+					border:1px solid rgb(123,123,123);
+					border-radius:8px;
+					width:50px;
+					height:20px;
+					background-color:rgb(123,123,123);
+					font-size:12px;
+					font-weight:bold;
+					color:#fff;
+					float:left;
+			}
+	.conditionDivTop{
+			 	width:320px;
+				height:40px;
+				margin-left:18px;
+				
+				
+				}
+	#departure,#arrive,.conditionBox{	
+					padding-top:3px;	
+					width:95px;
+					background-color:#fff;
+					color:rgb(123,123,123);
+					
+		}
+	#departure,#place,.conditionBox{
+										margin-left:20px;
+	}
+	
+	#label1{
+			margin-left:3px;
+			color:rgb(123,123,123);
+			font-weight:bold;
+			font-size:15px;
+	}
+	#arrive{
+				margin:-27px 0 0 190px;
+				
+				}
+	span{
+			height:10px;
+		}
+		
+	#useridBox,#room,#place{
+				padding-top:3px;
+				text-align:center;
+				border:1px solid rgb(123,123,123);
+				border-radius:8px;
+				width:75px;
+				height:22px;
+				background-color:#fff;
+				font-size:12px;
+				font-weight:bold;
+				color:rgb(123,123,123);
+				float:left;
+				margin:0 15px 0 10px;
+				
+	}	
+	#room{
+				
+					width:40px;
+					height:25px;
+				
+	}
+	#whole,#whole2,#ten,#twenty,#thirty,#forty,#fiftyOver,#genderBoy,#genderGirl{
+															padding-top:4px;
+															text-align:center;
+															border:1px solid rgb(123,123,123);
+															border-radius:8px;
+															width:50px;
+															height:20px;
+															background-color:#fff;
+															font-size:12px;
+															font-weight:bold;
+															color:rgb(123,123,123);
+															float:left;
+	
+	}
+		
+	#genderBoy,#genderGirl{	
+							width:30px;
+							margin-left:10px;
+	}	
+	#whole,#whole2,#ten,#twenty,#thirty,#forty,#fiftyOver{
+															margin-left:10px;
+	}		
+	input[type=checkbox],input[type=radio]{
+						display:none;
+	}	
+	
+	.conditionDivBottom{
+						width:320px;
+						height:40px;
+						margin-left:60px;
+					
+						
+	}	
+		
+	#writeForm{
+			margin-top:30px;
+			height:500px;
+			float:left;
+			
+	}	
+	#title{
+			height:25px;
+			margin-bottom:20px;
+	}
+
+	#title,#content{
+				width:800px;
+			
+				
+	}
+	#writebuttonDiv{
+					width:220px;
+					height:50px;
+					margin:0 auto;
+					
+	}	
+	
+	#writebuttonDiv input{
+							width:70px;
+							padding-top:2px;
+							border:1px solid rgb(69,69,79);
+							border-radius:8px;
+							height:30px;
+							background-color:rgb(69,69,79);
+							text-align:center;
+							font-size:15px;
+							font-weight:bold;
+							color:#fff;		
+							margin:20px 0 0 25px;	
+	
+	}	
+	#writebuttonDiv input:last-child{	
+										width:75px;
+										background-color:#fff;
+										color:rgb(69,69,79);							
+	}	
+		
+	#place{
+				padding-top:3px;
+				text-align:center;
+				border:1px solid rgb(123,123,123);
+				border-radius:8px;
+				width:75px;
+				height:26px;
+				background-color:#fff;
+				font-size:12px;
+				font-weight:bold;
+				color:rgb(123,123,123);
+				float:left;
+				margin:0 15px 0 10px;
+				height:26px; 
+				text-align-last:center;
+				margin-left:20px;		
+	}	
+		
+		
+		
+		
+		
+		
+		
+		
