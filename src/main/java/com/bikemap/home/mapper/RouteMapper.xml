@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bikemap.home.route.RouteDaoImp">
+	<insert id="insertCategory" parameterType = "com.bikemap.home.route.RouteCateVO">
+		insert into routecategory(noroutecate, catename, userid) values(a_sq.nextval, #{catename}, #{userid})
+	</insert>
+	<insert id="insertBasicCategory">
+		insert into routecategory(noroutecate, catename, userid) values(a_sq.nextval, '내 코스', #{param1})
+	</insert>
+	<select id="selectCategory" resultType="com.bikemap.home.route.RouteCateVO">
+		select noroutecate, catename from routecategory where userid = #{param1} order by noroutecate asc
+	</select>
+</mapper> 

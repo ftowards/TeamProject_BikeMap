@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bikemap.home.mailng.MailHandler;
+import com.bikemap.home.route.RouteDaoImp;
 
 @Controller
 public class RegistController {
@@ -59,11 +60,20 @@ public class RegistController {
 	@ResponseBody
 	public int registerFormOk(RegistVO vo) {
 		RegistDaoImp dao = sqlSession.getMapper(RegistDaoImp.class);
+		RouteDaoImp routeDao = sqlSession.getMapper(RouteDaoImp.class);
+		int result = 0;
+		
+		// vo에 인증 코드 세팅
 		vo.setCode(new TempKey().qetKey());
 		
-		int result =dao.insertUser(vo);
-		
 		try {
+		// 회원 가입
+		result =dao.insertUser(vo);
+		
+		// 회원 가입 오류 없을 시 기본 카테고리 생성
+		routeDao.insertBasicCategory(vo.getUserid());
+		
+			// 회원 가입에 오류가 없을 시 인증 메일 발송
 			if(result == 1) {
 				MailHandler sendMail = new MailHandler(mailSender);
 			        sendMail.setSubject("[바이크맵] 회원 인증 메일입니다.");
