@@ -19,8 +19,6 @@ public class TourVO {
 	private String state;
 	private String ip;
 	
-	
-	
 	public int getNotour() {
 		return notour;
 	}
